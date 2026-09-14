@@ -22,7 +22,7 @@ export default function StatsSection() {
         </AnimateIn>
 
         {/* Right Side: 3x2 Grid of Key Metrics */}
-        <div className="w-full flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-14 lg:gap-y-16 gap-x-8 sm:gap-x-12 lg:gap-x-16 xl:gap-x-20">
+        <div className="w-full flex-1 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-14 lg:gap-y-16 gap-x-8 sm:gap-x-12 lg:gap-x-16 xl:gap-x-20">
           {statsData.map((stat, idx) => (
             <AnimateIn
               key={idx}
@@ -30,10 +30,10 @@ export default function StatsSection() {
               delay={idx * 80}
               className="flex flex-col justify-center pl-6 sm:pl-7 border-l-2 border-[#EF403F] py-1"
             >
-              <div className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#78BA43] tracking-tight leading-none mb-3">
+              <div className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold text-[#78BA43] tracking-tight leading-none mb-3">
                 {stat.value}
               </div>
-              <p className="text-xs sm:text-[13px] lg:text-sm font-semibold text-neutral-600 uppercase tracking-widest leading-tight whitespace-pre-line">
+              <p className="text-[10px] sm:text-[13px] lg:text-sm font-semibold text-neutral-600 uppercase tracking-widest leading-tight whitespace-pre-line">
                 {stat.label}
               </p>
             </AnimateIn>

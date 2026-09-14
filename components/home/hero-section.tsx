@@ -24,7 +24,7 @@ export default function HeroSection() {
       {/* Content Container Aligned Bottom-Left */}
       <div className="relative z-10 mx-auto w-full">
         <AnimateIn variant="fade-up" duration={800} delay={100}>
-          <div className="w-full max-w-xl lg:max-w-4xl bg-white/75 backdrop-blur-[75%] p-8 sm:p-12 lg:p-14 border border-white/60 shadow-2xl rounded-none">
+          <div className="w-full max-w-2xl lg:max-w-4xl bg-white/75 backdrop-blur-[75%] p-6 sm:p-10 lg:p-14 border border-white/60 shadow-2xl rounded-none">
             <p className="text-xs sm:text-sm font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
               BATTERY &middot; BATTERY MANAGEMENT &middot; SOLAR &middot; CHARGING
             </p>
@@ -36,7 +36,7 @@ export default function HeroSection() {
               battery management, solar and EV charging, engineered against one
               another and built in India.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap   items-center gap-4">
               <Link
                 href="/products"
                 className="inline-flex items-center justify-center px-18 py-3 bg-[#78BA43] hover:bg-[#68A535] text-white font-medium text-sm transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
