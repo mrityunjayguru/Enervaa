@@ -5,6 +5,10 @@ import CapabilitiesSection from "@/components/home/capabilities-section";
 import IndustriesSection from "@/components/home/industries-section";
 import UnifiedSystemSection from "@/components/home/unified-system-section";
 import LifecycleSection from "@/components/home/lifecycle-section";
+import InFieldSection from "@/components/home/in-field-section";
+import WhyEnervaaSection from "@/components/home/why-enervaa-section";
+import CtaBannerSection from "@/components/home/cta-banner-section";
+import Footer from "@/components/global/footer";
 
 export default function Home() {
   return (
@@ -17,7 +21,11 @@ export default function Home() {
         <IndustriesSection />
         <UnifiedSystemSection />
         <LifecycleSection />
+        <InFieldSection />
+        <WhyEnervaaSection />
+        <CtaBannerSection />
       </main>
+      <Footer />
     </div>
   );
 }

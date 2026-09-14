@@ -5,27 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
-export interface NavItem {
-  label: string;
-  href: string;
-  isActive?: boolean;
-}
-
-const defaultNavItems: NavItem[] = [
-  { label: "Home", href: "/", isActive: true },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Industries", href: "/industries" },
-  { label: "Products", href: "/products" },
-  { label: "About Us", href: "/about" },
-  { label: "Blogs", href: "/blogs" },
-];
+import { defaultNavItems } from "@/lib/site-data";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white backdrop-blur-md border-b border-gray-100 text-neutral-900 overflow-x-hidden">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white backdrop-blur-[75%] border-b border-gray-100 text-neutral-900 overflow-x-hidden">
+      <div className="mx-auto flex h-20  items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Left: Brand Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
@@ -89,7 +76,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-black/10 bg-[#E5F4F1] px-4 pt-3 pb-6 space-y-3">
+        <div className="lg:hidden border-t border-black/10 bg-white px-4 pt-3 pb-6 space-y-3">
           <div className="flex flex-col space-y-2">
             {defaultNavItems.map((item) => (
               <Link

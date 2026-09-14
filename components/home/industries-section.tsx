@@ -4,61 +4,15 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import UNION from "@/public/logos/Union.svg";
-
-export interface IndustryItem {
-  id: string;
-  title: string;
-  description: string;
-  iconSrc: string;
-  href?: string;
-}
-
-const industriesData: IndustryItem[] = [
-  {
-    id: "01",
-    title: "Automotive & fleet",
-    description: "Packs, BMS and depot charging for 2W, 3W, LCV and tractors.",
-    iconSrc: "/logos/icons/car.svg",
-    href: "/industries/automotive",
-  },
-  {
-    id: "02",
-    title: "Rail & transit",
-    description:
-      "Rolling-stock packs, battery management and passenger information.",
-    iconSrc: "/logos/icons/train.svg",
-    href: "/industries/rail-transit",
-  },
-  {
-    id: "03",
-    title: "Commercial & industrial",
-    description:
-      "All four — solar, storage, control and charging behind the meter.",
-    iconSrc: "/logos/icons/solar-panel.svg",
-    href: "/industries/commercial-industrial",
-  },
-  {
-    id: "04",
-    title: "Utility & grid",
-    description: "Solar parks and megawatt-hour storage on three-tier control.",
-    iconSrc: "/logos/icons/battery-charge.svg",
-    href: "/industries/utility-grid",
-  },
-  {
-    id: "05",
-    title: "Residential",
-    description: "Rooftop solar with a modular home battery and AC charging.",
-    iconSrc: "/logos/icons/solar-house.svg",
-    href: "/industries/residential",
-  },
-];
+import AnimateIn from "@/components/ui/animate-in";
+import { industriesData } from "@/lib/site-data";
 
 export default function IndustriesSection() {
   return (
     <section className="relative w-full bg-white py-16 sm:py-24 lg:py-28 overflow-hidden border-b border-neutral-100">
-      <div className=" px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Header Container with Star Watermark */}
-        <div className="relative mb-12 lg:mb-16">
+        <AnimateIn variant="fade-up" className="relative mb-12 lg:mb-16">
           {/* Background Star Watermark Accent */}
           <div className="absolute -top-16 -right-2 pointer-events-none z-0 select-none">
             <Image
@@ -83,42 +37,43 @@ export default function IndustriesSection() {
               which of the four we supply into it — and which we don&apos;t.
             </p>
           </div>
-        </div>
+        </AnimateIn>
 
         {/* 5-Column Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6">
-          {industriesData.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href || "#"}
-              className="group flex flex-col justify-between h-full bg-[#F5F9F0]  p-6 lg:p-7 transition-all border border-transparent hover:border-[#78BA43]/20 min-h-[90px]"
-            >
-              {/* Top Row: Red Number & Custom SVG Icon */}
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-sm font-semibold text-[#EF403F]">
-                  {item.id}
-                </span>
-                <div className="relative w-12 h-12 flex items-center justify-end">
-                  <Image
-                    src={item.iconSrc}
-                    alt={item.title}
-                    width={70}
-                    height={70}
-                    className=" object-contain transition-transform group-hover:scale-105"
-                  />
+          {industriesData.map((item, idx) => (
+            <AnimateIn key={item.id} variant="fade-up" delay={idx * 90}>
+              <Link
+                href={item.href || "#"}
+                className="group flex flex-col justify-between h-full bg-[#F5F9F0] p-6 lg:p-7 transition-all duration-300 border border-transparent hover:border-[#78BA43]/30 hover:-translate-y-1 hover:shadow-md min-h-[90px]"
+              >
+                {/* Top Row: Red Number & Custom SVG Icon */}
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-sm font-semibold text-[#EF403F]">
+                    {item.id}
+                  </span>
+                  <div className="relative w-12 h-12 flex items-center justify-end">
+                    <Image
+                      src={item.iconSrc}
+                      alt={item.title}
+                      width={70}
+                      height={70}
+                      className="object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Bottom Row: Title & Description */}
-              <div>
-                <h3 className="text-base sm:text-xl font-normal text-[#78BA43] mb-1 group-hover:translate-x-0.5 transition-transform">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-[14px] text-black leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </Link>
+                {/* Bottom Row: Title & Description */}
+                <div>
+                  <h3 className="text-base sm:text-xl font-normal text-[#78BA43] mb-1 group-hover:translate-x-0.5 transition-transform">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-[14px] text-black leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </Link>
+            </AnimateIn>
           ))}
         </div>
       </div>
