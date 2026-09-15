@@ -26,11 +26,11 @@ export default function CtaBannerSection() {
           {/* Split Border CTA Button */}
           <Link
             href="/contact"
-            className="group inline-flex items-center border border-white/70 divide-x divide-white/70 text-white text-sm sm:text-base font-normal hover:bg-white/10 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] mb-6"
+            className="group inline-flex items-center border border-white divide-x divide-current text-white text-sm sm:text-base font-normal hover:bg-white hover:text-[#4F8030] transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] mb-6"
           >
             <span className="px-5 py-3">Start a conversation</span>
             <span className="px-3.5 py-3 flex items-center justify-center">
-              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
           </Link>
 

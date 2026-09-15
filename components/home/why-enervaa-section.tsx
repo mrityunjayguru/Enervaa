@@ -6,7 +6,7 @@ import { whyReasonsData } from "@/lib/site-data";
 
 export default function WhyEnervaaSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-24 lg:py-28 border-b border-neutral-100">
+    <section className="w-full bg-white py-16 sm:py-24 lg:py-28">
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Header Row */}
         <AnimateIn variant="fade-up" className="flex flex-col sm:flex-row items-start sm:items-baseline gap-3 sm:gap-6 mb-12 lg:mb-16">

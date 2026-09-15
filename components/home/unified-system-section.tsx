@@ -10,7 +10,7 @@ import { unifiedSystemFeatures } from "@/lib/site-data";
 
 export default function UnifiedSystemSection() {
   return (
-    <section className="w-full bg-[#F5F9F0] py-12 sm:py-16 lg:py-20 border-b border-neutral-100">
+    <section className="w-full bg-linear-to-r from-[#F5F9F0]  to-white py-12 sm:py-16 lg:py-20">
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
         {/* Left Column: Text & Bullet Points */}
         <AnimateIn variant="fade-right" className="w-full lg:w-1/2">

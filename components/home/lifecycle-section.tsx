@@ -7,14 +7,14 @@ import { lifecycleStepsData } from "@/lib/site-data";
 
 export default function LifecycleSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-24 lg:py-28 overflow-hidden border-b border-neutral-100">
+    <section className="w-full bg-white py-16 sm:py-24 lg:py-28 overflow-hidden">
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16">
         {/* Left Column: Header & Description */}
         <AnimateIn variant="fade-up" className="w-full lg:w-1/3 max-w-lg">
           <span className="text-xs sm:text-sm font-semibold tracking-wider text-[#78BA43] uppercase mb-4 block">
             FULL LIFECYCLE
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 leading-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 mb-8">
             From the first sketch to year-ten service.
           </h2>
           <p className="text-sm sm:text-base text-black font-normal leading-relaxed">

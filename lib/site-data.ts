@@ -60,11 +60,43 @@ export interface OfficeLocation {
   addressLines: string[];
 }
 
+export interface FootprintItem {
+  location: string;
+  description: string;
+}
+
+export interface LeaderItem {
+  id: string;
+  name: string;
+  role: string;
+  imageSrc: string;
+  linkedin?: string;
+  phone?: string;
+  email?: string;
+}
+
+export interface SpecialistTeamItem {
+  id: string;
+  logoSrc: string;
+  logoAlt: string;
+  categoryTag: string;
+  title: string;
+  description: string;
+  tags: string[];
+}
+
+export interface CommercialModelItem {
+  id: string;
+  modelTag: string;
+  title: string;
+  description: string;
+}
+
 // ----------------------------------------------------
 // Navigation Data
 // ----------------------------------------------------
 export const defaultNavItems: NavItem[] = [
-  { label: "Home", href: "/", isActive: true },
+  { label: "Home", href: "/" },
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries" },
   { label: "Products", href: "/products" },
@@ -101,6 +133,26 @@ export const statsData: StatItem[] = [
     label: "CHENNAI & BENGALURU",
   },
 ];
+
+export const aboutStatsData: StatItem[] = [
+  {
+    value: "150+",
+    label: "ENGINEERING &\nMANUFACTURING",
+  },
+  {
+    value: "2",
+    label: "STRATEGIC HUBS",
+  },
+  {
+    value: "15+",
+    label: "YEARS LONGEST\nTRACK RECORD",
+  },
+  {
+    value: "5",
+    label: "SOLUTION LINES",
+  },
+];
+
 
 export const capabilitiesData: CapabilityCardProps[] = [
   {
@@ -223,6 +275,38 @@ export const lifecycleStepsData: LifecycleStep[] = [
   },
 ];
 
+export const aboutLifecycleStepsData: LifecycleStep[] = [
+  {
+    stepNumber: "Step 01",
+    title: "Engineer",
+    description:
+      "System architecture, simulation, validation and homologation support, on one requirements set.",
+    href: "/services/engineer",
+  },
+  {
+    stepNumber: "Step 02",
+    title: "Source",
+    description:
+      "BoM engineering, Tier-1 cell partnerships and localised supply — import exposure engineered down, not passed on.",
+    href: "/services/source",
+  },
+  {
+    stepNumber: "Step 03",
+    title: "Execute",
+    description:
+      "Factory build, site construction, integration and commissioning, on one schedule.",
+    href: "/services/execute",
+  },
+  {
+    stepNumber: "Step 04",
+    title: "Operate",
+    description:
+      "Remote monitoring, preventive maintenance, cell-level diagnostics and OTA firmware for the life of the asset.",
+    href: "/services/operate",
+  },
+];
+
+
 export const fieldCardsData: FieldCardItem[] = [
   {
     id: "01",
@@ -323,3 +407,124 @@ export const officeLocations: OfficeLocation[] = [
     ],
   },
 ];
+
+export const footprintData: FootprintItem[] = [
+  {
+    location: "Chennai",
+    description:
+      "Headquarters and manufacturing. Battery pack lines at Sipcot Industrial Growth Centre, Vallam Vadagal, Kancheepuram, and charger manufacturing.",
+  },
+  {
+    location: "Bengaluru",
+    description:
+      "Research and development. Hardware, firmware and cloud teams at KIADB Aerospace Park, Devanahalli.",
+  },
+  {
+    location: "Reach",
+    description:
+      "Projects delivered across India, with solar experience extending to Africa and Italy.",
+  },
+];
+
+export const leadershipData: LeaderItem[] = [
+  {
+    id: "01",
+    name: "Emerson Vetrovs",
+    role: "Founder & Chairman",
+    imageSrc: "/images/about/img-1.png",
+    linkedin: "#",
+    phone: "#",
+    email: "#",
+  },
+  {
+    id: "02",
+    name: "Marley Culhane",
+    role: "Vice Chairperson",
+    imageSrc: "/images/about/img-2.png",
+    linkedin: "#",
+    phone: "#",
+    email: "#",
+  },
+  {
+    id: "03",
+    name: "Lincoln Franci",
+    role: "CEO",
+    imageSrc: "/images/about/img-3.png",
+    linkedin: "#",
+    phone: "#",
+    email: "#",
+  },
+  {
+    id: "04",
+    name: "Dulce Bator",
+    role: "President - Manufacturing",
+    imageSrc: "/images/about/img-4.png",
+    linkedin: "#",
+    phone: "#",
+    email: "#",
+  },
+];
+
+export const specialistTeamsData: SpecialistTeamItem[] = [
+  {
+    id: "01",
+    logoSrc: "/images/about/icons/awev.svg",
+    logoAlt: "AWEV Solutions",
+    categoryTag: "STORE · POWER",
+    title: "AWEV Solutions",
+    description:
+      "Battery pack manufacturing for EVs, energy storage and special applications. Founded 2018, Chennai, 100+ people.",
+    tags: ["EV PACKS", "BESS"],
+  },
+  {
+    id: "02",
+    logoSrc: "/images/about/icons/revx.svg",
+    logoAlt: "ReVx Energy",
+    categoryTag: "MANAGE",
+    title: "ReVx Energy",
+    description:
+      "Battery and mobility intelligence — BMS, EMS, cloud analytics and transit systems. Founded December 2020, Bengaluru.",
+    tags: ["VINCIX", "TURINGX", "NAVAS"],
+  },
+  {
+    id: "03",
+    logoSrc: "/images/about/icons/playsolar.svg",
+    logoAlt: "PlaySolar",
+    categoryTag: "GENERATE",
+    title: "PlaySolar",
+    description:
+      "Solar PV system integration — design, EPC, asset management and O&M, with monitoring and automated cleaning platforms.",
+    tags: ["ROOF TOP", "C&I", "SOLAR PARK"],
+  },
+  {
+    id: "04",
+    logoSrc: "/images/about/icons/plugzmart.svg",
+    logoAlt: "Plugzmart",
+    categoryTag: "DELIVER",
+    title: "Plugzmart",
+    description:
+      "EV charging hardware and software — AC, DC and portable chargers with the Relay management platform. Founded 2018, Chennai.",
+    tags: ["AC + DC", "RELAY CMS"],
+  },
+];
+
+export const commercialModelsData: CommercialModelItem[] = [
+  {
+    id: "01",
+    modelTag: "MODEL 01",
+    title: "CAPEX",
+    description:
+      "You own the asset outright. Enervaa designs, builds, commissions and hands over, then stays on for O&M and warranty.",
+  },
+  {
+    id: "02",
+    modelTag: "MODEL 02",
+    title: "OPEX · per-kWh PPA",
+    description:
+      "Enervaa develops the project and builds the SPV that owns the asset; you pay only for units consumed, with debt and equity carried at the SPV.",
+  },
+];
+
+
+
+

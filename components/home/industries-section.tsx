@@ -9,7 +9,7 @@ import { industriesData } from "@/lib/site-data";
 
 export default function IndustriesSection() {
   return (
-    <section className="relative w-full bg-white py-16 sm:py-24 lg:py-28 overflow-hidden border-b border-neutral-100">
+    <section className="relative w-full bg-white py-16 sm:py-24 lg:py-28 overflow-hidden">
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Header Container with Star Watermark */}
         <AnimateIn variant="fade-up" className="relative mb-12 lg:mb-16">

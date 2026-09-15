@@ -9,7 +9,7 @@ import { fieldCardsData } from "@/lib/site-data";
 
 export default function InFieldSection() {
   return (
-    <section className="w-full bg-[#F5F9F0] py-16 sm:py-24 lg:py-28 border-b border-neutral-100">
+    <section className="w-full bg-[#F5F9F0] py-16 sm:py-24 lg:py-28">
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Top Header Row */}
         <AnimateIn variant="fade-up" className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-12 lg:mb-16">
