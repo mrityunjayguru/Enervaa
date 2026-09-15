@@ -5,20 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SYSTEM from "@/public/images/system.svg";
-
-const features = [
-  "One requirements set spanning panel, pack, controller and charger",
-  "One commissioning schedule instead of four to reconcile",
-  "One warranty and one support line for the whole asset",
-  "One data layer — monitoring, diagnostics and firmware over the air",
-];
+import AnimateIn from "@/components/ui/animate-in";
+import { unifiedSystemFeatures } from "@/lib/site-data";
 
 export default function UnifiedSystemSection() {
   return (
-    <section className="w-full bg-[#F5F9F0] py-12 sm:py-16 lg:py-20 border-b border-neutral-100">
-      <div className=" px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
+    <section className="w-full bg-linear-to-r from-[#F5F9F0]  to-white py-12 sm:py-16 lg:py-20">
+      <div className="px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
         {/* Left Column: Text & Bullet Points */}
-        <div className="w-full lg:w-1/2">
+        <AnimateIn variant="fade-right" className="w-full lg:w-1/2">
           <span className="text-xs sm:text-sm font-semibold tracking-wider text-[#78BA43] uppercase mb-3 block">
             ONE UNIFIED SYSTEM
           </span>
@@ -34,7 +29,7 @@ export default function UnifiedSystemSection() {
 
           {/* Bullet points with red chevrons */}
           <ul className="space-y-3 mb-8">
-            {features.map((feature, idx) => (
+            {unifiedSystemFeatures.map((feature, idx) => (
               <li
                 key={idx}
                 className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 font-medium"
@@ -50,15 +45,15 @@ export default function UnifiedSystemSection() {
           {/* Action Button */}
           <Link
             href="/system"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#78BA43] hover:bg-[#68A535] text-white text-sm font-medium transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#78BA43] hover:bg-[#68A535] text-white text-sm font-medium transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>How Enervaa is put together</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </div>
+        </AnimateIn>
 
         {/* Right Column: System SVG Diagram */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end lg:mr-10">
+        <AnimateIn variant="fade-left" className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end lg:mr-10">
           <div className="w-full max-w-[700px]">
             <Image
               src={SYSTEM}
@@ -66,10 +61,10 @@ export default function UnifiedSystemSection() {
               width={564}
               height={440}
               priority
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain transition-transform duration-500 hover:scale-[1.02]"
             />
           </div>
-        </div>
+        </AnimateIn>
       </div>
     </section>
   );

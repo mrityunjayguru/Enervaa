@@ -120,9 +120,12 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    scrollbar-width: thin;
+    scrollbar-color: "gray" #f1f5f9;
   }
   html, body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
@@ -130,4 +133,23 @@
   html {
     @apply font-sans;
   }
+}
+
+/* Custom Small & Thin Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: "gray";
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: "gray"
 }
