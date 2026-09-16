@@ -24,14 +24,14 @@ export default function HeroSection() {
       {/* Content Container Aligned Bottom-Left */}
       <div className="relative z-10 mx-auto w-full">
         <AnimateIn variant="fade-up" duration={800} delay={100}>
-          <div className="w-full max-w-2xl lg:max-w-4xl bg-white/75 backdrop-blur-[75%] p-6 sm:p-10 lg:p-14 border border-white/60 shadow-2xl rounded-none">
-            <p className="text-xs sm:text-sm font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
+          <div className="w-full max-w-2xl lg:max-w-4xl bg-[#F5F9F0]/75 backdrop-blur-[75%] p-6 sm:p-10 lg:p-14 border border-white/60 shadow-2xl rounded-none">
+            <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
               BATTERY &middot; BATTERY MANAGEMENT &middot; SOLAR &middot; CHARGING
             </p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 leading-tight mb-6 max-w-2xl">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#2C2E1F] mb-6 max-w-2xl">
               The whole clean-energy loop, from one company.
             </h1>
-            <p className="text-sm sm:text-base text-neutral-700 leading-relaxed mb-8 max-w-3xl">
+            <p className="text-[15px] sm:text-lg text-black leading-relaxed mb-8 max-w-3xl">
               Enervaa generates, stores, manages and delivers energy — battery packs,
               battery management, solar and EV charging, engineered against one
               another and built in India.
@@ -39,14 +39,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href="/products"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-16 py-3.5 bg-[#78BA43] hover:bg-[#68A535] text-white font-medium text-sm transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-16 py-3.5 bg-[#78BA43] hover:bg-[#68A535] text-white font-bold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 What we make
               </Link>
 
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-16 py-3.5 border border-neutral-900 bg-transparent hover:bg-black/5 text-neutral-900 font-medium text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-16 py-3.5 border border-neutral-900 bg-transparent hover:bg-black/5 text-neutral-900 font-bold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 Start a project
               </Link>

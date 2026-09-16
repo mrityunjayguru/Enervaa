@@ -11,10 +11,10 @@ export default function CtaBannerSection() {
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-12">
         {/* Left Column: Heading & Description */}
         <AnimateIn variant="fade-right" className="max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-tight mb-4">
             Tell us what you are building.
           </h2>
-          <p className="text-sm sm:text-base text-white/90 font-normal leading-relaxed">
+          <p className="text-sm sm:text-base text-[#FBFBF1] font-normal">
             A rooftop, a fleet, a factory load, a grid-connected asset — we will
             tell you which parts of the loop you actually need, and which you
             don&apos;t.
@@ -26,7 +26,7 @@ export default function CtaBannerSection() {
           {/* Split Border CTA Button */}
           <Link
             href="/contact"
-            className="group inline-flex items-center border border-white divide-x divide-current text-white text-sm sm:text-base font-normal hover:bg-white hover:text-[#4F8030] transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] mb-6"
+            className="group inline-flex items-center border border-white divide-x divide-current text-white text-sm sm:text-base font-bold hover:bg-white hover:text-[#4F8030] transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] mb-6"
           >
             <span className="px-5 py-3">Start a conversation</span>
             <span className="px-3.5 py-3 flex items-center justify-center">
@@ -41,7 +41,7 @@ export default function CtaBannerSection() {
             </span>
             <Link
               href="/about"
-              className="inline-flex items-center gap-1.5 text-white hover:text-white/80 text-sm font-normal transition-colors"
+              className="inline-flex items-center gap-1.5 text-white hover:text-white/80 text-sm font-bold transition-colors hover:underline"
             >
               <span>About Us</span>
               <ArrowRight className="w-4 h-4" />

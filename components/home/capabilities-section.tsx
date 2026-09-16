@@ -13,14 +13,14 @@ export default function CapabilitiesSection() {
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Top Header Row */}
         <AnimateIn variant="fade-up" className="flex flex-col lg:flex-row justify-between items-center gap-8 mb-12 lg:mb-16">
-          <div className="max-w-2xl">
-            <span className="text-xs sm:text-sm font-semibold tracking-wider text-[#78BA43] uppercase mb-4 block">
+          <div className="max-w-4xl">
+           <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
               WHAT WE MAKE
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 leading-tight mb-4">
+            </p>
+           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#2C2E1F] mb-4 max-w-4xl">
               Four capabilities. One system.
-            </h2>
-            <p className="text-sm sm:text-base text-neutral-600 font-normal leading-relaxed">
+            </h1>
+           <p className="text-[15px] sm:text-lg text-black mb-8 max-w-4xl">
               Most energy projects are stitched together from four suppliers who each
               own a quarter of the problem. Enervaa owns all of it — so the
               interfaces between the panel, the pack, the brain and the charger
@@ -31,7 +31,7 @@ export default function CapabilitiesSection() {
           <div className="shrink-0">
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 px-5 py-3 bg-[#78BA43] hover:bg-[#68A535] text-white text-sm font-medium transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-16 py-3.5 bg-[#78BA43] hover:bg-[#68A535] text-white font-bold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>All 27 products and datasheets</span>
               <ArrowRight className="w-4 h-4" />

@@ -28,7 +28,7 @@ export default function Footer() {
                 className="h-7 w-auto object-contain"
               />
             </Link>
-            <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed max-w-md">
+            <p className="text-sm sm:text-base text-black max-w-md ">
               Solar, storage, battery systems, battery intelligence and EV
               charging — engineered and built in India, delivered as one system.
             </p>
@@ -36,16 +36,16 @@ export default function Footer() {
 
           {/* Right Column: Offices */}
           <div className="lg:col-span-7 flex flex-col">
-            <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-4 block">
+            <span className="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-4 block">
               OFFICES
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
               {officeLocations.map((office, idx) => (
                 <div key={idx}>
-                  <h4 className="text-xs sm:text-sm font-medium text-[#78BA43] mb-1">
+                  <h4 className="text-sm sm:text-base font-bold text-[#78BA43] mb-1">
                     {office.cityRole}
                   </h4>
-                  <p className="text-xs text-neutral-600 leading-relaxed">
+                  <p className="text-sm text-black leading-relaxed">
                     {office.addressLines.map((line, lIdx) => (
                       <React.Fragment key={lIdx}>
                         {line}
@@ -66,12 +66,12 @@ export default function Footer() {
         <AnimateIn variant="fade-up" delay={100} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 py-2">
           {/* Email Block */}
           <div className="lg:col-span-3">
-            <span className="text-xs font-medium text-neutral-400 block mb-1.5">
+            <span className="text-sm font-medium text-neutral-400 block mb-1.5">
               Mail us at
             </span>
             <a
               href="mailto:hello@enervaa.com"
-              className="text-sm sm:text-base font-medium text-[#78BA43] hover:underline transition-colors"
+              className="text-sm sm:text-base font-bold text-[#78BA43] hover:underline transition-colors"
             >
               hello@enervaa.com
             </a>
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Company Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
               COMPANY
             </h4>
             <ul className="space-y-2.5">
@@ -87,7 +87,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-xs sm:text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-sm sm:text-base text-neutral-600 hover:text-neutral-900 transition-colors font-bno"
                   >
                     {link.label}
                   </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* Solutions Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
               SOLUTIONS
             </h4>
             <ul className="space-y-2.5">
@@ -106,7 +106,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-xs sm:text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-sm sm:text-base text-neutral-600 hover:text-neutral-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -117,7 +117,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
               QUICK LINKS
             </h4>
             <ul className="space-y-2.5">
@@ -125,7 +125,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-xs sm:text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-sm sm:text-base text-neutral-600 hover:text-neutral-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
         <div className="w-full border-t border-neutral-200/80 mt-8 pt-6" />
 
         {/* Row 3: Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-neutral-400">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px]  text-[#2C2E1F]">
           <p>© 2026 Enervaa. All rights reserved.</p>
           <p>
             Enervaa is AWEV Solutions, RevX Energy, PlaySolar and Plugzmart.

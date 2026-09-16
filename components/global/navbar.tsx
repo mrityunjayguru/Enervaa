@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,7 +10,22 @@ import { defaultNavItems } from "@/lib/site-data";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isItemActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -18,7 +33,13 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white backdrop-blur-[75%] border-b border-gray-100 text-neutral-900 overflow-x-hidden">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-300 overflow-x-hidden text-neutral-900 ${
+        isScrolled
+          ? "bg-white"
+          : "bg-[#F7F8FA]/75 backdrop-blur-[75%]"
+      }`}
+    >
       <div className="mx-auto flex h-20  items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Left: Brand Logo */}
         <div className="flex items-center">
@@ -45,8 +66,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`transition-colors font-normal ${
                     active
-                      ? "text-[#78BA43] font-medium"
-                      : "text-neutral-800 hover:text-[#78BA43]"
+                      ? "text-[#78BA43] font-bold"
+                      : "text-black hover:text-[#78BA43] font-bold"
                   }`}
                 >
                   {item.label}
@@ -57,7 +78,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="group inline-flex items-center border border-neutral-900 divide-x divide-neutral-900 text-neutral-900 hover:bg-[#78BA43] hover:text-white hover:divide-white transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] text-sm font-medium"
+            className="group inline-flex items-center border border-neutral-900 divide-x divide-neutral-900 text-neutral-900 hover:bg-[#78BA43] hover:text-white hover:divide-white transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98] text-sm font-bold"
           >
             <span className="px-6 py-2">Talk to us</span>
             <span className="px-2.5 py-2 flex items-center justify-center">
