@@ -48,12 +48,12 @@ export default function CapabilityCard({
         </span>
 
         {/* Title */}
-        <h3 className="text-xl sm:text-3xl font-normal text-neutral-900 leading-tight mb-1">
+        <h3 className="text-2xl sm:text-3xl font-medium text-[#2C2E1F] leading-tight mb-1">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-xs sm:text-sm font-normal text-neutral-600 mb-6 flex-1">
+        <p className="text-sm sm:text-sm font-normal text-black mb-6 flex-1">
           {description}
         </p>
 
@@ -63,7 +63,7 @@ export default function CapabilityCard({
             {tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="bg-[#FBFBF1] text-[#4F8030] text-[10px] sm:text-[11px] font-semibold px-2.5 py-1 uppercase tracking-wider rounded-none"
+                className="bg-[#FBFBF1] text-[#4F8030] text-[12px] sm:text-[12px] font-bold px-2.5 py-1 uppercase tracking-wider rounded-none"
               >
                 {tag}
               </span>

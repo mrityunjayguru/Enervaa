@@ -14,13 +14,13 @@ export default function UnifiedSystemSection() {
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
         {/* Left Column: Text & Bullet Points */}
         <AnimateIn variant="fade-right" className="w-full lg:w-1/2">
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-[#78BA43] uppercase mb-3 block">
+          <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
             ONE UNIFIED SYSTEM
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 leading-tight mb-5">
+          </p>
+           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#2C2E1F] mb-4 max-w-4xl">
             Generate. Store. Manage. Deliver.
-          </h2>
-          <p className="text-sm sm:text-base text-neutral-600 font-normal leading-relaxed mb-6">
+          </h1>
+           <p className="text-[15px] sm:text-lg text-black mb-8 max-w-4xl">
             Each stage is designed knowing what the next one needs. The battery
             management that ships inside our storage is the same platform that
             runs in our EV packs; the solar we install is sized against the
@@ -37,7 +37,7 @@ export default function UnifiedSystemSection() {
                 <span className="text-[#EF403F] font-bold text-sm leading-none select-none mt-0.5">
                   &gt;
                 </span>
-                <span>{feature}</span>
+                <span className="text-[16px] sm:text-xl text-black max-w-4xl">{feature}</span>
               </li>
             ))}
           </ul>
@@ -45,7 +45,7 @@ export default function UnifiedSystemSection() {
           {/* Action Button */}
           <Link
             href="/system"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#78BA43] hover:bg-[#68A535] text-white text-sm font-medium transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-16 py-3.5 bg-[#78BA43] hover:bg-[#68A535] text-white font-bold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>How Enervaa is put together</span>
             <ArrowRight className="w-4 h-4" />

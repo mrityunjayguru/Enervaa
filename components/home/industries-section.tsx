@@ -26,13 +26,13 @@ export default function IndustriesSection() {
           </div>
 
           <div className="relative z-10 max-w-2xl pt-6 sm:pt-8">
-            <span className="text-xs sm:text-sm font-semibold tracking-wider text-[#78BA43] uppercase mb-4 block">
+             <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
               THE OTHER WAY IN
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 leading-tight mb-4">
+            </p>
+           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#2C2E1F] mb-4 max-w-4xl">
               Or start from what you operate.
-            </h2>
-            <p className="text-sm sm:text-base text-neutral-600 font-normal leading-relaxed">
+            </h1>
+            <p className="text-[15px] sm:text-lg text-black mb-8 max-w-4xl">
               Nobody buys all four on day one. Pick your industry and see exactly
               which of the four we supply into it — and which we don&apos;t.
             </p>
@@ -45,19 +45,19 @@ export default function IndustriesSection() {
             <AnimateIn key={item.id} variant="fade-up" delay={idx * 90}>
               <Link
                 href={item.href || "#"}
-                className="group flex flex-col justify-between h-full bg-[#F5F9F0] p-6 lg:p-7 transition-all duration-300 border border-transparent hover:border-[#78BA43]/30 hover:-translate-y-1 hover:shadow-md min-h-[90px]"
+                className="group flex flex-col justify-between h-full bg-[#F5F9F0] p-4 lg:p-3 py-5 lg:py-6 pb-6 lg:pb-8 transition-all duration-300 border border-transparent hover:border-[#78BA43]/30 hover:-translate-y-1 hover:shadow-md min-h-[90px]"
               >
                 {/* Top Row: Red Number & Custom SVG Icon */}
                 <div className="flex items-center justify-between mb-8">
                   <span className="text-sm font-semibold text-[#EF403F]">
                     {item.id}
                   </span>
-                  <div className="relative w-12 h-12 flex items-center justify-end">
+                  <div className="relative w-14 h-14 flex items-center justify-end">
                     <Image
                       src={item.iconSrc}
                       alt={item.title}
-                      width={70}
-                      height={70}
+                      width={80}
+                      height={80}
                       className="object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
@@ -65,10 +65,10 @@ export default function IndustriesSection() {
 
                 {/* Bottom Row: Title & Description */}
                 <div>
-                  <h3 className="text-base sm:text-xl font-normal text-[#78BA43] mb-1 group-hover:translate-x-0.5 transition-transform">
+                  <h3 className="text-2xl sm:text-2xl font-medium text-[#78BA43] mb-1 group-hover:translate-x-0.5 transition-transform">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-[14px] text-black leading-relaxed">
+                  <p className="text-sm sm:text-[14px] text-black">
                     {item.description}
                   </p>
                 </div>
