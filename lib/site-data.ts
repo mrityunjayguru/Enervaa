@@ -92,6 +92,15 @@ export interface CommercialModelItem {
   description: string;
 }
 
+export interface FourDeskItem {
+  id: string;
+  categoryTag: string;
+  title: string;
+  description: string;
+  buttonLabel: string;
+  href: string;
+}
+
 // ----------------------------------------------------
 // Navigation Data
 // ----------------------------------------------------
@@ -524,6 +533,42 @@ export const commercialModelsData: CommercialModelItem[] = [
       "Enervaa develops the project and builds the SPV that owns the asset; you pay only for units consumed, with debt and equity carried at the SPV.",
   },
 ];
+
+export const fourDesksData: FourDeskItem[] = [
+  {
+    id: "01",
+    categoryTag: "STORE",
+    title: "AWEV Solutions",
+    description: "EV battery packs, residential, C&I and grid storage. Chennai.",
+    buttonLabel: "Battery — ESS \u2192",
+    href: "/solutions/battery-packs",
+  },
+  {
+    id: "02",
+    categoryTag: "MANAGE",
+    title: "ReVx Energy",
+    description: "BMS, EMS, battery cloud and transit systems. Bengaluru.",
+    buttonLabel: "Battery intelligence \u2192",
+    href: "/solutions/battery-management",
+  },
+  {
+    id: "03",
+    categoryTag: "GENERATE",
+    title: "PlaySolar",
+    description: "PV design, EPC, asset management and O&M.",
+    buttonLabel: "Solar \u2192",
+    href: "/solutions/solar-ev-charging",
+  },
+  {
+    id: "04",
+    categoryTag: "DELIVER",
+    title: "Plugzmart",
+    description: "AC and DC chargers, Relay bridge and B2B CMS. Chennai.",
+    buttonLabel: "EV charging \u2192",
+    href: "/solutions/ev-charging",
+  },
+];
+
 
 
 
