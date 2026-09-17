@@ -78,8 +78,8 @@ export default function Footer() {
           </div>
 
           {/* Company Links */}
-          <div className="lg:col-span-3">
-            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
+          <div className="lg:col-span-3 mt-4 sm:mt-0">
+            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-3">
               COMPANY
             </h4>
             <ul className="space-y-2.5">
@@ -97,8 +97,8 @@ export default function Footer() {
           </div>
 
           {/* Solutions Links */}
-          <div className="lg:col-span-3">
-            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
+          <div className="lg:col-span-3 mt-4 sm:mt-0">
+            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-3">
               SOLUTIONS
             </h4>
             <ul className="space-y-2.5">
@@ -116,8 +116,8 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-3">
-            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-4">
+          <div className="lg:col-span-3 mt-4 sm:mt-0">
+            <h4 className="text-sm font-semibold text-[#78BA43] uppercase tracking-wider mb-3">
               QUICK LINKS
             </h4>
             <ul className="space-y-2.5">

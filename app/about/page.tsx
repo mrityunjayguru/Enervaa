@@ -5,7 +5,7 @@ import AboutLifecycleSection from "@/components/about/about-lifecycle-section";
 import AboutCommercialModelsSection from "@/components/about/about-commercial-models-section";
 import AboutLeadershipSection from "@/components/about/about-leadership-section";
 import AboutSpecialistTeamsSection from "@/components/about/about-specialist-teams-section";
-import CtaBannerSection from "@/components/home/cta-banner-section";
+import CtaBannerSection from "@/components/about/cta-banner-section";
 
 export const metadata = {
   title: "About Us | Enervaa",

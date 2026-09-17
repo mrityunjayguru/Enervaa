@@ -48,7 +48,7 @@ export default function IndustriesSection() {
                 className="group flex flex-col justify-between h-full bg-[#F5F9F0] p-4 lg:p-3 py-5 lg:py-6 pb-6 lg:pb-8 transition-all duration-300 border border-transparent hover:border-[#78BA43]/30 hover:-translate-y-1 hover:shadow-md min-h-[90px]"
               >
                 {/* Top Row: Red Number & Custom SVG Icon */}
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center justify-between mb-4 sm:mb-8">
                   <span className="text-sm font-semibold text-[#EF403F]">
                     {item.id}
                   </span>

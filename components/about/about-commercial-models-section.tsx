@@ -13,15 +13,15 @@ export default function AboutCommercialModelsSection() {
           {/* Left Column: Heading */}
           <div className="lg:col-span-4 flex flex-col justify-start">
             <AnimateIn variant="fade-up" delay={0}>
-              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#78BA43] mb-4 sm:mb-5 block">
+              <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
                 COMMERCIAL MODELS
-              </span>
+              </p>
             </AnimateIn>
 
             <AnimateIn variant="fade-up" delay={100}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight   text-neutral-900 leading-tight mb-8">
+             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#2C2E1F] mb-4 max-w-4xl">
                 Own it, or buy<br className="hidden sm:inline" /> the electron.
-              </h2>
+              </h1>
             </AnimateIn>
           </div>
 
@@ -38,17 +38,17 @@ export default function AboutCommercialModelsSection() {
                   <div className="group flex flex-col justify-between h-full bg-white p-7 sm:p-8 lg:p-9 rounded-none  hover:-translate-y-1.5 transition-all duration-300">
                     <div>
                       {/* Model Tag */}
-                      <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#78BA43] mb-4 sm:mb-5 block">
+                      <span className="text-xs sm:text-sm font-medium uppercase tracking-wider text-[#78BA43] mb-4 sm:mb-5 block">
                         {item.modelTag}
                       </span>
 
                       {/* Title */}
-                      <h3 className="text-3xl sm:text-3xl lg:text-4xl font-normal text-neutral-900 mb-3 sm:mb-4 tracking-tight group-hover:text-[#78BA43] transition-colors duration-300">
+                      <h3 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-neutral-900 mb-3 sm:mb-4 tracking-tight group-hover:text-[#78BA43] transition-colors duration-300">
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                      <p className="text-sm sm:text-base text-black font-normal">
                         {item.description}
                       </p>
                     </div>
