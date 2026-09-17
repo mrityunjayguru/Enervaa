@@ -101,6 +101,17 @@ export interface FourDeskItem {
   href: string;
 }
 
+export interface BlogPost {
+  slug: string;
+  categoryTag: string;
+  categoryName: string;
+  title: string;
+  excerpt: string;
+  imageSrc: string;
+  imageAlt: string;
+  content: string[];
+}
+
 // ----------------------------------------------------
 // Navigation Data
 // ----------------------------------------------------
@@ -568,6 +579,106 @@ export const fourDesksData: FourDeskItem[] = [
     href: "/solutions/ev-charging",
   },
 ];
+
+export const blogPostsData: BlogPost[] = [
+  {
+    slug: "what-ais-156-actually-asks-of-a-pack",
+    categoryTag: "BATTERY MANAGEMENT · DRAFT",
+    categoryName: "BATTERY MANAGEMENT",
+    title: "What AIS-156 actually asks of a pack",
+    excerpt:
+      "The certification is often read as a box to tick. In practice it shapes the cell arrangement, the thermal design and the diagnostic coverage of the BMS — and it is far cheaper to design for than to retrofit.",
+    imageSrc: "/images/blogs/img-1.png",
+    imageAlt: "Battery Pack Inspection & AIS-156 Testing",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies orci libero, et maximus massa tempor id. Cras nec malesuada ligula, non iaculis nibh. Mauris tempor pellentesque dui, vel porta dolor iaculis vitae. Curabitur vulputate nisi nec magna eleifend dignissim. Ut non massa sapien. Nulla eu rutrum elit, et finibus arcu. Nunc lacus nisl, iaculis eget nunc id, fermentum ultricies arcu. Quisque vitae magna non nisl faucibus fringilla nec eleifend sapien. Curabitur egestas neque leo, et ultrices nisi mattis non.",
+      "Nam mattis magna nec nunc sagittis tempus. In hac habitasse platea dictumst. Cras vel consequat turpis, at ornare ex. Nam id odio enim. Nunc non eleifend mi. Phasellus efficitur dolor eget aliquam condimentum. Aliquam erat volutpat. Aenean mattis neque risus, id lacinia sem elementum a. Quisque lobortis est sapien, nec ultricies diam pellentesque cursus. Nullam orci diam, finibus sit amet velit in, maximus pellentesque magna. Phasellus nisl urna, ultricies non laoreet ut, condimentum sed elit. Quisque ultrices convallis quam. Quisque eleifend laoreet metus, eu ultrices orci egestas sed. Curabitur a ultrices sapien, tincidunt venenatis mi.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo."
+    ]
+  },
+  {
+    slug: "sizing-storage-against-a-real-ci-load-profile",
+    categoryTag: "ENERGY STORAGE · DRAFT",
+    categoryName: "BATTERY MANAGEMENT",
+    title: "Sizing storage against a real C&I load profile",
+    excerpt:
+      "Peak shaving, backup duration and tariff arbitrage pull the answer in three different directions. A walk through how we resolve them from fifteen-minute interval data.",
+    imageSrc: "/images/blogs/img-2.png",
+    imageAlt: "Battery Storage Drawer and Module",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies orci libero, et maximus massa tempor id. Cras nec malesuada ligula, non iaculis nibh. Mauris tempor pellentesque dui, vel porta dolor iaculis vitae. Curabitur vulputate nisi nec magna eleifend dignissim. Ut non massa sapien. Nulla eu rutrum elit, et finibus arcu. Nunc lacus nisl, iaculis eget nunc id, fermentum ultricies arcu. Quisque vitae magna non nisl faucibus fringilla nec eleifend sapien. Curabitur egestas neque leo, et ultrices nisi mattis non.",
+      "Nam mattis magna nec nunc sagittis tempus. In hac habitasse platea dictumst. Cras vel consequat turpis, at ornare ex. Nam id odio enim. Nunc non eleifend mi. Phasellus efficitur dolor eget aliquam condimentum. Aliquam erat volutpat. Aenean mattis neque risus, id lacinia sem elementum a. Quisque lobortis est sapien, nec ultricies diam pellentesque cursus. Nullam orci diam, finibus sit amet velit in, maximus pellentesque magna. Phasellus nisl urna, ultricies non laoreet ut, condimentum sed elit. Quisque ultrices convallis quam. Quisque eleifend laoreet metus, eu ultrices orci egestas sed. Curabitur a ultrices sapien, tincidunt venenatis mi.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo."
+    ]
+  },
+  {
+    slug: "why-soiling-costs-more-than-shading",
+    categoryTag: "SOLAR · DRAFT",
+    categoryName: "SOLAR",
+    title: "Why soiling costs more than shading",
+    excerpt:
+      "On most Indian rooftops the yield lost to dust between cleaning cycles exceeds the yield lost to shadow. What that means for cleaning schedules and for the O&M contract you sign.",
+    imageSrc: "/images/blogs/img-3.png",
+    imageAlt: "Solar Panel Field Installation",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies orci libero, et maximus massa tempor id. Cras nec malesuada ligula, non iaculis nibh. Mauris tempor pellentesque dui, vel porta dolor iaculis vitae. Curabitur vulputate nisi nec magna eleifend dignissim. Ut non massa sapien. Nulla eu rutrum elit, et finibus arcu. Nunc lacus nisl, iaculis eget nunc id, fermentum ultricies arcu. Quisque vitae magna non nisl faucibus fringilla nec eleifend sapien. Curabitur egestas neque leo, et ultrices nisi mattis non.",
+      "Nam mattis magna nec nunc sagittis tempus. In hac habitasse platea dictumst. Cras vel consequat turpis, at ornare ex. Nam id odio enim. Nunc non eleifend mi. Phasellus efficitur dolor eget aliquam condimentum. Aliquam erat volutpat. Aenean mattis neque risus, id lacinia sem elementum a. Quisque lobortis est sapien, nec ultricies diam pellentesque cursus. Nullam orci diam, finibus sit amet velit in, maximus pellentesque magna. Phasellus nisl urna, ultricies non laoreet ut, condimentum sed elit. Quisque ultrices convallis quam. Quisque eleifend laoreet metus, eu ultrices orci egestas sed. Curabitur a ultrices sapien, tincidunt venenatis mi.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo."
+    ]
+  },
+  {
+    slug: "one-charger-several-networks",
+    categoryTag: "EV CHARGING · DRAFT",
+    categoryName: "EV CHARGING",
+    title: "One charger, several networks",
+    excerpt:
+      "How a multi-CMS bridge changes depot economics — and why charge-point operators end up with better utilisation when a unit is not locked to one platform.",
+    imageSrc: "/images/blogs/img-4.png",
+    imageAlt: "EV Charger Depot Station",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies orci libero, et maximus massa tempor id. Cras nec malesuada ligula, non iaculis nibh. Mauris tempor pellentesque dui, vel porta dolor iaculis vitae. Curabitur vulputate nisi nec magna eleifend dignissim. Ut non massa sapien. Nulla eu rutrum elit, et finibus arcu. Nunc lacus nisl, iaculis eget nunc id, fermentum ultricies arcu. Quisque vitae magna non nisl faucibus fringilla nec eleifend sapien. Curabitur egestas neque leo, et ultrices nisi mattis non.",
+      "Nam mattis magna nec nunc sagittis tempus. In hac habitasse platea dictumst. Cras vel consequat turpis, at ornare ex. Nam id odio enim. Nunc non eleifend mi. Phasellus efficitur dolor eget aliquam condimentum. Aliquam erat volutpat. Aenean mattis neque risus, id lacinia sem elementum a. Quisque lobortis est sapien, nec ultricies diam pellentesque cursus. Nullam orci diam, finibus sit amet velit in, maximus pellentesque magna. Phasellus nisl urna, ultricies non laoreet ut, condimentum sed elit. Quisque ultrices convallis quam. Quisque eleifend laoreet metus, eu ultrices orci egestas sed. Curabitur a ultrices sapien, tincidunt venenatis mi.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo."
+    ]
+  },
+  {
+    slug: "testing-100-percent-of-packs-and-what-it-catches",
+    categoryTag: "MANUFACTURING",
+    categoryName: "MANUFACTURING",
+    title: "Testing 100% of packs, and what it catches",
+    excerpt:
+      "Sampling plans are cheaper. Here is the failure data that made us test every pack instead, and what full traceability from cell lot to shipped unit is actually worth.",
+    imageSrc: "/images/blogs/img-5.png",
+    imageAlt: "Battery Pack 100% Testing Equipment",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies orci libero, et maximus massa tempor id. Cras nec malesuada ligula, non iaculis nibh. Mauris tempor pellentesque dui, vel porta dolor iaculis vitae. Curabitur vulputate nisi nec magna eleifend dignissim. Ut non massa sapien. Nulla eu rutrum elit, et finibus arcu. Nunc lacus nisl, iaculis eget nunc id, fermentum ultricies arcu. Quisque vitae magna non nisl faucibus fringilla nec eleifend sapien. Curabitur egestas neque leo, et ultrices nisi mattis non.",
+      "Nam mattis magna nec nunc sagittis tempus. In hac habitasse platea dictumst. Cras vel consequat turpis, at ornare ex. Nam id odio enim. Nunc non eleifend mi. Phasellus efficitur dolor eget aliquam condimentum. Aliquam erat volutpat. Aenean mattis neque risus, id lacinia sem elementum a. Quisque lobortis est sapien, nec ultricies diam pellentesque cursus. Nullam orci diam, finibus sit amet velit in, maximus pellentesque magna. Phasellus nisl urna, ultricies non laoreet ut, condimentum sed elit. Quisque ultrices convallis quam. Quisque eleifend laoreet metus, eu ultrices orci egestas sed. Curabitur a ultrices sapien, tincidunt venenatis mi.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo."
+    ]
+  },
+  {
+    slug: "the-interfaces-nobody-owns",
+    categoryTag: "SYSTEMS",
+    categoryName: "SYSTEMS",
+    title: "The interfaces nobody owns",
+    excerpt:
+      "Panel to inverter, inverter to battery, battery to BMS, BMS to charger. A tour of the four seams where multi-vendor clean-energy projects usually lose their schedule.",
+    imageSrc: "/images/blogs/img-6.png",
+    imageAlt: "Clean Energy Integration Interfaces",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies orci libero, et maximus massa tempor id. Cras nec malesuada ligula, non iaculis nibh. Mauris tempor pellentesque dui, vel porta dolor iaculis vitae. Curabitur vulputate nisi nec magna eleifend dignissim. Ut non massa sapien. Nulla eu rutrum elit, et finibus arcu. Nunc lacus nisl, iaculis eget nunc id, fermentum ultricies arcu. Quisque vitae magna non nisl faucibus fringilla nec eleifend sapien. Curabitur egestas neque leo, et ultrices nisi mattis non.",
+      "Nam mattis magna nec nunc sagittis tempus. In hac habitasse platea dictumst. Cras vel consequat turpis, at ornare ex. Nam id odio enim. Nunc non eleifend mi. Phasellus efficitur dolor eget aliquam condimentum. Aliquam erat volutpat. Aenean mattis neque risus, id lacinia sem elementum a. Quisque lobortis est sapien, nec ultricies diam pellentesque cursus. Nullam orci diam, finibus sit amet velit in, maximus pellentesque magna. Phasellus nisl urna, ultricies non laoreet ut, condimentum sed elit. Quisque ultrices convallis quam. Quisque eleifend laoreet metus, eu ultrices orci egestas sed. Curabitur a ultrices sapien, tincidunt venenatis mi.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo.",
+      "Fusce molestie magna purus, vel euismod sem sodales vitae. Suspendisse potenti. Vivamus sem lorem, aliquam id dapibus eget, maximus eu quam. Donec luctus enim diam, ullamcorper ornare ligula elementum eu. Donec vestibulum risus id consequat vehicula. Nullam interdum leo vitae lobortis feugiat. Curabitur vel facilisis lectus. Fusce non purus condimentum nisi sollicitudin ultricies in a mauris. Quisque lacinia ipsum a mi bibendum auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis auctor felis. In facilisis odio justo, quis commodo sem sodales eu. Morbi rutrum luctus commodo."
+    ]
+  }
+];
+
 
 
 
