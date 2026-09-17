@@ -25,15 +25,15 @@ export default function AboutLeadershipSection() {
         {/* Header */}
         <div className="mb-12 lg:mb-16">
           <AnimateIn variant="fade-up" delay={0}>
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#78BA43] mb-4 sm:mb-5 block">
+            <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
               LEADERSHIP
-            </span>
+            </p>
           </AnimateIn>
 
           <AnimateIn variant="fade-up" delay={100}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 leading-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-neutral-900 mb-4 max-w-2xl sm:max-w-4xl">
               One vision, built to move forward.
-            </h2>
+            </h1>
           </AnimateIn>
         </div>
 
@@ -109,10 +109,10 @@ export default function AboutLeadershipSection() {
 
               {/* Leader Details */}
               <div className="mt-4 flex flex-col">
-                <h3 className="text-lg sm:text-xl font-medium text-neutral-900 group-hover:text-[#78BA43] transition-colors duration-300">
+                <h3 className="text-xl sm:text-2xl font-medium text-neutral-900 group-hover:text-[#78BA43] transition-colors duration-300">
                   {leader.name}
                 </h3>
-                <p className="text-xs sm:text-sm font-normal text-[#78BA43] mt-0.5">
+                <p className="text-sm sm:text-base font-medium text-[#78BA43] mt-0.5">
                   {leader.role}
                 </p>
               </div>

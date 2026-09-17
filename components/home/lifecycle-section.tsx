@@ -26,15 +26,15 @@ export default function LifecycleSection() {
         </AnimateIn>
 
         {/* Right Column: 4 Step Cards Grid */}
-        <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-5">
           {lifecycleStepsData.map((step, idx) => (
             <AnimateIn key={idx} variant="fade-up" delay={idx * 100}>
               <Link
                 href={step.href || "#"}
-                className="group flex flex-col justify-between h-full bg-[#FAFCF7] p-6 lg:p-7 transition-all duration-300 border border-transparent hover:border-[#78BA43]/30 hover:-translate-y-1 hover:shadow-md min-h-[230px] sm:min-h-[300px]"
+                className="group flex flex-col justify-between h-full bg-[#FAFCF7] p-6 lg:p-7 transition-all duration-300 border border-transparent hover:border-[#78BA43]/30 hover:-translate-y-1 hover:shadow-md min-h-[220px] sm:min-h-[300px]"
               >
                 {/* Top Row: Step Tag + Arrow */}
-                <div className="flex items-center gap-1 text-sm sm:text-base font-semibold text-[#78BA43] mb-6">
+                <div className="flex items-center gap-1 text-sm sm:text-base font-semibold text-[#78BA43] ">
                   <span>{step.stepNumber}</span>
                   <span className="text-[#EF403F] group-hover:translate-x-1 transition-transform">
                     &rarr;

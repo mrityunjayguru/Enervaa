@@ -14,21 +14,21 @@ export default function AboutSpecialistTeamsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12 lg:mb-16">
           <div className="lg:col-span-7 flex flex-col justify-start">
             <AnimateIn variant="fade-up" delay={0}>
-              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#78BA43] mb-4 sm:mb-5 block">
+              <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
                 HOW IT IS PUT TOGETHER
-              </span>
+              </p>
             </AnimateIn>
 
             <AnimateIn variant="fade-up" delay={100}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-neutral-900 max-w-2xl sm:max-w-4xl">
                 One name, four specialist teams.
-              </h2>
+              </h1>
             </AnimateIn>
           </div>
 
           <div className="lg:col-span-5 flex flex-col justify-start pt-1 sm:pt-2">
             <AnimateIn variant="fade-up" delay={150}>
-              <p className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-2xl mb-10 sm:mb-14">
+              <p className="text-[15px] sm:text-lg text-black mb-4 max-w-4xl">
                 You buy from Enervaa and you are supported by Enervaa. Behind that, four companies keep their own factories, engineers and product lines — which is why the depth in each area is real rather than assembled for a brochure.
               </p>
             </AnimateIn>
@@ -49,28 +49,28 @@ export default function AboutSpecialistTeamsSection() {
                 {/* Top Content */}
                 <div>
                   {/* Brand Logo Box */}
-                  <div className="h-14 sm:h-18 flex items-center justify-start mb-6">
+                  <div className="h-18 sm:h-20 flex items-center justify-start mb-6">
                     <Image
                       src={team.logoSrc}
                       alt={team.logoAlt}
-                      width={190}
-                      height={80}
-                      className="h-8 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                      width={290}
+                      height={100}
+                      className="h-10 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 
                   {/* Category Tag */}
-                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#78BA43] mb-2 block">
+                  <span className="text-[12px] sm:text-sm font-medium uppercase tracking-wider text-[#78BA43] mb-2 block">
                     {team.categoryTag}
                   </span>
 
                   {/* Title */}
-                  <h3 className="text-xl sm:text-3xl font-normal text-neutral-900 mb-3 tracking-tight transition-colors">
+                  <h3 className="text-3xl sm:text-4xl font-medium text-neutral-900 mb-3 tracking-tight transition-colors">
                     {team.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                  <p className="text-[14px] sm:text-base text-black leading-relaxed">
                     {team.description}
                   </p>
                 </div>
@@ -80,7 +80,7 @@ export default function AboutSpecialistTeamsSection() {
                   {team.tags.map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="px-2.5 py-1 bg-[#FBFBF1] text-[#78BA43] text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider rounded-none transition-colors"
+                      className="px-2.5 py-1 bg-[#FBFBF1] text-[#78BA43] text-[12px] sm:text-[12px] font-medium uppercase tracking-wider rounded-none transition-colors"
                     >
                       {tag}
                     </span>
@@ -94,7 +94,7 @@ export default function AboutSpecialistTeamsSection() {
 
         {/* Bottom Green Info Banner Box with 50% Overlap into Next Section */}
         <AnimateIn variant="fade-up" delay={450} className="relative z-20">
-          <div className="mt-12 sm:mt-16 -mb-20 sm:-mb-24 lg:-mb-24 w-full max-w-[720px] bg-[#78BA43] text-white p-4 sm:p-4 lg:p-2 rounded-none flex items-center gap-4 sm:gap-5">
+          <div className="mt-12 sm:mt-16 -mb-20 sm:-mb-24 lg:-mb-24 w-full max-w-[730px] bg-[#78BA43] text-white p-4 sm:p-4 lg:p-2 rounded-none flex items-center gap-4 sm:gap-5">
             <div className="shrink-0 p-1">
               <Image
                 src="/logos/Union.svg"
@@ -104,7 +104,7 @@ export default function AboutSpecialistTeamsSection() {
                 className="w-7 sm:w-8 h-auto object-contain brightness-200"
               />
             </div>
-            <p className="text-xs sm:text-sm text-white/95 leading-relaxed">
+            <p className="text-[12px] sm:text-base text-white/95 leading-relaxed">
               <span className="">Each company keeps its own name on its own products and contracts. </span>
               <br />
               Enervaa is the layer that lets them be specified, bought, warranted and supported as one.

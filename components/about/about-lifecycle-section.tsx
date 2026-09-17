@@ -15,19 +15,19 @@ export default function AboutLifecycleSection() {
           {/* Left Column: Heading & Paragraph */}
           <div className="lg:col-span-8 flex flex-col justify-start">
             <AnimateIn variant="fade-up" delay={0}>
-              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#78BA43] mb-4 sm:mb-5 block">
+              <p className="text-xs sm:text-[16px] font-semibold tracking-wider text-[#78BA43] uppercase mb-4">
                 FULL LIFECYCLE
-              </span>
+              </p>
             </AnimateIn>
 
             <AnimateIn variant="fade-up" delay={100}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 mb-8">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-neutral-900 mb-4 max-w-2xl sm:max-w-4xl">
                 Four stages, one contract.
-              </h2>
+              </h1>
             </AnimateIn>
 
             <AnimateIn variant="fade-up" delay={150}>
-              <p className="text-sm sm:text-base text-neutral-600 font-normal leading-relaxed max-w-2xl">
+              <p className="text-[15px] sm:text-lg text-black mb-4 max-w-4xl">
                 The value is not that we can supply five things. It is that the interfaces between those five things stop being your problem.
               </p>
             </AnimateIn>
@@ -60,7 +60,7 @@ export default function AboutLifecycleSection() {
               className="group flex flex-col justify-start"
             >
               {/* Step Tag */}
-              <div className="text-xs sm:text-sm font-semibold text-[#78BA43] mb-4 flex items-center gap-1.5">
+              <div className="text-xs sm:text-sm font-semibold text-[#78BA43] mb-3 flex items-center gap-1.5">
                 <span>{step.stepNumber}</span>
                 <span className="text-[#EF403F] group-hover:translate-x-1 transition-transform duration-300">
                   &rarr;
@@ -68,13 +68,13 @@ export default function AboutLifecycleSection() {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl sm:text-3xl font-normal text-neutral-900 mb-5 tracking-tight group-hover:text-[#78BA43] transition-colors duration-300">
+             <h3 className="text-2xl sm:text-2xl font-medium text-black mb-2 group-hover:translate-x-0.5 transition-transform">
                 {step.title}
               </h3>
 
               {/* Top Border Line & Description */}
               <div className="border-t border-b border-neutral-200/75 py-4 sm:py-5">
-                <p className="text-sm sm:text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm sm:text-[14px] font-normal text-black">
                   {step.description}
                 </p>
               </div>
