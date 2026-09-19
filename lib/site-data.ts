@@ -771,16 +771,16 @@ export const pillarsData: PillarItem[] = [
     tag: "PILLAR",
     title: "Solar",
     description:
-      "Solar is delivered as a system, engineered against the load profile and storage backing rather than an off-the-shelf kit.",
+      "Solar is designed, built and maintained as a system — array, structure, inverter and monitoring are selected against the site, the roof and the tariff, so there is no part number to publish here.",
     linkText: "Solar overview \u2192",
-    linkHref: "/solutions/solar-ev-charging",
+    linkHref: "/solutions/solar",
   },
   {
     id: "ev-charging",
     tag: "PILLAR",
     title: "EV charging",
     description:
-      "AC and DC hardware from 3.3 kW to 360 kW, connected natively to multi-CMS platforms.",
+      "AC and DC hardware, designed and manufactured in India.",
     linkText: "EV charging overview \u2192",
     linkHref: "/solutions/ev-charging",
   },
@@ -840,8 +840,18 @@ export const evBatteryPacksData: EvBatteryPackItem[] = [
 ];
 
 export const energyStorageSystemsData: EnergyStorageSystemItem[] = [
-  {
+    {
     id: "01",
+    title: "C&I Storage — Liquid-Cooled",
+    description:
+      "Intelligent liquid cooling for balanced cell temperatures, with dual-level fire protection at both cabin and pack level, scalable to MWh class.",
+    imageSrc: "/images/products/products/Energy-storage-systems/img-3.png",
+    imageAlt: "C&I Storage — Liquid-Cooled",
+    tags: ["FACTORY", "DATA CENTRE", "MWH-CLASS"],
+    href: "/products/ci-storage-liquid-cooled",
+  },
+  {
+    id: "02",
     title: "Home Storage Stack",
     description:
       "A 51.2 V modular stack for houses, integrated with all major inverter brands and stackable as the household load grows.",
@@ -851,7 +861,7 @@ export const energyStorageSystemsData: EnergyStorageSystemItem[] = [
     href: "/products/home-storage-stack",
   },
   {
-    id: "02",
+    id: "03",
     title: "C&I Storage — Air-Cooled",
     description:
       "Cabinet-scale storage with a DC-coupled hybrid inverter and cabinet-level fire fighting, with our own battery and energy management.",
@@ -860,22 +870,212 @@ export const energyStorageSystemsData: EnergyStorageSystemItem[] = [
     tags: ["FACTORY", "WAREHOUSE", "CAMPUS"],
     href: "/products/ci-storage-air-cooled",
   },
+];
+
+export const lowVoltageManagementData: EnergyStorageSystemItem[] = [
+    {
+    id: "01",
+    title: "VinciX BMS-18S",
+    description:
+      "Seven to eighteen cells on a 48 V bus, AIS-156 certified, with an onboard precharge relay and integrated PDU for contactor drive.",
+    imageSrc: "/images/products/products/bettery-manegement/low-voltage/img-1.jpg",
+    imageAlt: "VinciX BMS-18S",
+    tags: ["Light EVs", "Motorcycles & scooters", "3-wheeler","Home & industrial storage"],
+    href: "/products/vincix-bms-18s",
+  },
+  {
+    id: "02",
+    title: "VinciX BMS-36S",
+    description:
+      "Twenty to thirty-six cells on a 120 V bus. Railway-certified and deployed on Vande Bharat trainsets, with dual CAN and parallel-string operation.",
+    imageSrc: "/images/products/products/bettery-manegement/low-voltage/img-2.jpg",
+    imageAlt: "VinciX BMS-36S",
+    tags: ["Railway rolling stock", "Light commercial","Stationary storage"],
+    href: "/products/vincix-bms-36s",
+  },
   {
     id: "03",
-    title: "C&I Storage — Liquid-Cooled",
+    title: "VinciX MOSFET BMS",
     description:
-      "Intelligent liquid cooling for balanced cell temperatures, with dual-level fire protection at both cabin and pack level, scalable to MWh class.",
-    imageSrc: "/images/products/products/Energy-storage-systems/img-3.png",
-    imageAlt: "C&I Storage — Liquid-Cooled",
-    tags: ["FACTORY", "DATA CENTRE", "MWH-CLASS"],
-    href: "/products/ci-storage-liquid-cooled",
+      "Solid-state switching in place of contactors, at 100, 150 or 200 A, with an onboard power distribution unit.",
+    imageSrc: "/images/products/products/bettery-manegement/low-voltage/img-3.jpg",
+    imageAlt: "VinciX MOSFET BMS",
+    tags: ["2-wheeler", "3-wheeler", "Light EVs"],
+    href: "/products/vincix-mosfet-bms",
   },
 ];
 
+export const highVoltageManagementData: EnergyStorageSystemItem[] = [
+    {
+    id: "01",
+    title: "VinciX HV-BMS Master",
+    description:
+      "The high-voltage master controller — 13 V to 1500 V system range, up to 360 cells in series across the slave chain.",
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-1.jpg",
+    imageAlt: "VinciX HV-BMS Master",
+    tags: ["Bus & truck", "Tractor", "High-voltage storage"],
+    href: "/products/vincix-hv-bms-master",
+  },
+  {
+    id: "02",
+    title: "VinciX HV-BMU-54S",
+    description:
+      "Thirty-six to fifty-four cells with twenty-seven thermistor channels, CAN, RS-485 and onboard SD logging.",
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-2.jpg",
+    imageAlt: "VinciX HV-BMU-54S",
+    tags: ["Bus", "Truck","Tractor"],
+    href: "/products/vincix-hv-bmu-54s",
+  },
+  {
+    id: "03",
+    title: "VinciX HV-BMU-108S",
+    description:
+      "Seventy-two to one hundred and eight cells with thirty-six thermistor channels. ASIL-D ready, with SD logging.",
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-3.jpg",
+    imageAlt: "VinciX HV-BMU-108S",
+    tags: ["Bus", "Heavy commercial","Grid storage"],
+    href: "/products/vincix-hv-bmu-108s",
+  },
+    {
+    id: "04",
+    title: "VinciX Monolithic HV-BMS",
+    description:
+      "One board instead of a master and a slave chain — 108 cells at 400 V, for light commercial vehicles where board count matters more than modularity.",
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-4.jpg",
+    imageAlt: "VinciX Monolithic HV-BMS",
+    tags: ["LCV", "4-wheeler","Compact HV packs"],
+    href: "/products/vincix-monolithic-hv-bms",
+  },
+    {
+    id: "05",
+    title: "VinciX EV-BDU",
+    description:
+      "The battery disconnect unit: 400 to 750 V at 600 A, twelve HV contactors, with HVIL, insulation monitoring and an IP67 enclosure.",
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-5.jpg",
+    imageAlt: "VinciX EV-BDU",
+    tags: ["Bus", "Truck","Tractor","HV storage"],
+    href: "/products/vincix-ev-bdu",
+  },
+];
 
+export const energyStorageManagementSystemsData: EnergyStorageSystemItem[] = [
+    {
+    id: "01",
+    title: "VinciX ESS-LMU",
+    description:
+      "Tier one — the module slave. Six to eighteen cells per unit, daisy-chained over ISO-SPI or CAN up the rack.",
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-1.jpg",
+    imageAlt: "VinciX ESS-LMU",
+    tags: ["Residential storage", "C&I storage", "Grid storage"],
+    href: "/products/vincix-ess-lmu",
+  },
+  {
+    id: "02",
+    title: "VinciX ESS-PDU",
+    description:
+      "Thirty-six to fifty-four cells with twenty-seven thermistor channels, CAN, RS-485 and onboard SD logging.",
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-2.jpg",
+    imageAlt: "VinciX ESS-PDU",
+    tags: ["C&I storage","Grid storage"],
+    href: "/products/vincix-ess-pdu",
+  },
+  {
+    id: "03",
+    title: "VinciX MSC",
+    description:
+      "Tier three — the multi-string controller. Up to twenty racks in parallel, presenting one interface to the power conversion system.",
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-3.jpg",
+    imageAlt: "VinciX MSC",
+    tags: ["Grid storage","Multi-string BESS"],
+    href: "/products/vincix-msc",
+  },
+    {
+    id: "04",
+    title: "VinciX ESS MOSFET BMS",
+    description:
+      "Seven to sixteen cells with solid-state switching at 100, 150 or 200 A, for low-voltage stationary storage.",
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-4.jpg",
+    imageAlt: "VinciX ESS MOSFET BMS",
+    tags: ["Home storage", "Telecom","Small C&I"],
+    href: "/products/vincix-ess-mosfet-bms",
+  },
+];
 
+export const transitSystemsData: EnergyStorageSystemItem[] = [
+    {
+    id: "01",
+    title: "NAVAS VTS-4G",
+    description:
+      "AIS-140 vehicle tracking on 4G LTE, with multi-constellation GNSS, three isolated CAN FD ports and over-the-air updates.",
+    imageSrc: "/images/products/products/bettery-manegement/transit-systems/img-1.jpg",
+    imageAlt: "NAVAS VTS-4G",
+    tags: ["Bus fleets", "Commercial vehicles", "Public transport"],
+    href: "/products/navas-vts-4g",
+  },
+  {
+    id: "02",
+    title: "NAVAS PIS",
+    description:
+      "Thirty-six to fifty-four cells with twenty-seven thermistor channels, CAN, RS-485 and onboard SD logging.",
+    imageSrc: "/images/products/products/bettery-manegement/transit-systems/img-2.jpg",
+    imageAlt: "NAVAS PIS",
+    tags: ["City buses","Intercity coaches","Rail"],
+    href: "/products/navas-pis",
+  },
+  {
+    id: "03",
+    title: "NAVAS ITS",
+    description:
+      "Tier three — the multi-string controller. Up to twenty racks in parallel, presenting one interface to the power conversion system.",
+    imageSrc: "/images/products/products/bettery-manegement/transit-systems/img-3.jpg",
+    imageAlt: "NAVAS ITS",
+    tags: ["Bus fleets","Depot operations","Safety compliance"],
+    href: "/products/navas-its",
+  },
+];
 
-
+export const evChargingSystemsData: EnergyStorageSystemItem[] = [
+    {
+    id: "01",
+    title: "AC Charger — 3.3 kW",
+    description:
+      "A wall-mounted AC unit for homes and workplaces, with RFID authentication and integrated cable management.",
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-1.jpg",
+    imageAlt: "AC Charger — 3.3 kW",
+    tags: ["Home", "workplace", "Apartment"],
+    href: "/products/ac-charger-3-3-kw",
+  },
+  {
+    id: "02",
+    title: "DC Charger — 30 kW",
+    description:
+      "A compact DC fast charger for fleet depots and retail forecourts, with a full operator display.",
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-2.jpg",
+    imageAlt: "DC Charger — 30 kW",
+    tags: ["Fleet depot", "Forecourt", "3W & 4W"],
+    href: "/products/dc-charger-30-kw",
+  },
+  {
+    id: "03",
+    title: "DC Charger — 60 kW",
+    description:
+      "A dual-connector DC unit, ARAI tested, charging two vehicles at once.",
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-3.jpg",
+    imageAlt: "DC Charger — 60 kW",
+    tags: ["Public charging", "Fleet depot"],
+    href: "/products/dc-charger-60-kw",
+  },
+   {
+    id: "04",
+    title: "DC Charger — 120 kW",
+    description:
+      "Highway-grade CCS charging with dual cables and a full operator display, part of a range extending to 360 kW.",
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-4.jpg",
+    imageAlt: "DC Charger — 120 kW",
+    tags: ["Highway", "Public charging" ,"Bus & truck"],
+    href: "/products/dc-charger-120-kw",
+  },
+];
 
 
 

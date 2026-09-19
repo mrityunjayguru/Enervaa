@@ -22,13 +22,13 @@ export default function ProductCard({
   const content = (
     <div className={`flex flex-col h-full bg-transparent group ${className}`}>
       {/* Product Image Wrapper (White Box) */}
-      <div className="relative w-full aspect-video bg-white flex items-center justify-center p-6 sm:p-8 overflow-hidden mb-5 border border-black/5 shadow-2xs">
+      <div className="relative w-full aspect-[16/10] bg-white flex items-center justify-center p-2 sm:p-3 overflow-hidden mb-5 border border-black/5 shadow-2xs">
         <Image
           src={imageSrc}
           alt={imageAlt || title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-contain p-4 group-hover:scale-105 transition-transform duration-300 ease-out"
+          className="object-contain p-1 group-hover:scale-105 transition-transform duration-300 ease-out"
         />
       </div>
 
