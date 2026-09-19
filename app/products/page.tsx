@@ -4,8 +4,13 @@ import ProductsQuickNavSection from "@/components/products/products-quick-nav-se
 import ProductsPillarHeaderSection from "@/components/products/products-pillar-header-section";
 import ProductsEvSection from "@/components/products/products-ev-section";
 import ProductsEnergyStorageSection from "@/components/products/products-energy-storage-section";
-import CtaBannerSection from "@/components/about/cta-banner-section";
 import { pillarsData } from "@/lib/site-data";
+import ProductsBettryManagement from "@/components/products/products-bettry-management-low";
+import ProductsBettryManagementHigh from "@/components/products/products-bettry-management-high";
+import ProductsBettryManagementEnergyStorage from "@/components/products/products-bettry-management-energy-storage";
+import ProductsBettryManagementTransitSystem from "@/components/products/products-bettry-management-transit-system";
+import ProductsBettryManagementEvCharger from "@/components/products/products-bettry-management-ev-charger";
+import CtaBannerSection from "@/components/products/cta-banner-section";
 
 export default function ProductsPage() {
   return (
@@ -16,6 +21,13 @@ export default function ProductsPage() {
       <ProductsEvSection />
       <ProductsEnergyStorageSection />
       <ProductsPillarHeaderSection pillar={pillarsData[1]} id="battery-management" />
+      <ProductsBettryManagement />
+      <ProductsBettryManagementHigh/>
+      <ProductsBettryManagementEnergyStorage/>
+      <ProductsBettryManagementTransitSystem/>
+      <ProductsPillarHeaderSection pillar={pillarsData[2]} id="solar" />
+      <ProductsPillarHeaderSection pillar={pillarsData[3]} id="ev-charging" />
+      <ProductsBettryManagementEvCharger/>
       <CtaBannerSection />
     </main>
   );

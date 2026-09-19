@@ -3,9 +3,9 @@
 import React from "react";
 import AnimateIn from "@/components/ui/animate-in";
 import ProductCard from "@/components/ui/product-card";
-import { energyStorageSystemsData } from "@/lib/site-data";
+import { energyStorageManagementSystemsData, transitSystemsData} from "@/lib/site-data";
 
-export default function ProductsEnergyStorageSection() {
+export default function ProductsBettryManagementTransitSystem() {
   return (
     <section className="w-full bg-[#F5F7EE] py-12 sm:py-16 lg:py-20 relative">
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
@@ -25,7 +25,7 @@ export default function ProductsEnergyStorageSection() {
 
             <AnimateIn variant="fade-up" delay={100}>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#2C2E1F] mb-4 max-w-4xl">
-                Energy storage systems
+                Transit systems — NAVAS.
               </h1>
             </AnimateIn>
           </div>
@@ -34,7 +34,7 @@ export default function ProductsEnergyStorageSection() {
           <div className="max-w-xl lg:pt-6">
             <AnimateIn variant="fade-up" delay={150}>
               <p className="text-[15px] sm:text-lg text-black mb-8 max-w-4xl">
-                Modular storage from a home stack to megawatt-hour commercial systems, air- and liquid-cooled.
+                AIS-140 telematics, IS-16490 passenger information and intelligent transport.
               </p>
             </AnimateIn>
           </div>
@@ -42,7 +42,7 @@ export default function ProductsEnergyStorageSection() {
 
         {/* 3 Product Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-12 sm:mt-16">
-          {energyStorageSystemsData.map((product, idx) => (
+          {transitSystemsData.map((product, idx) => (
             <AnimateIn
               key={product.id}
               variant="fade-up"
