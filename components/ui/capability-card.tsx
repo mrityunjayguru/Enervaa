@@ -63,7 +63,7 @@ export default function CapabilityCard({
             {tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="bg-[#FBFBF1] text-[#4F8030] text-[12px] sm:text-[12px] font-bold px-2.5 py-1 uppercase tracking-wider rounded-none"
+                className="px-3 py-1.5 bg-[#F5F7EE] text-[#78BA43] text-xs font-medium rounded-md tracking-wide"
               >
                 {tag}
               </span>
