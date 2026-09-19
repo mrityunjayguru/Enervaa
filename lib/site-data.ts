@@ -112,6 +112,43 @@ export interface BlogPost {
   content: string[];
 }
 
+export interface ProductQuickNavItem {
+  id: string;
+  badge: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+export interface PillarItem {
+  id: string;
+  tag: string;
+  title: string;
+  description: string;
+  linkText: string;
+  linkHref: string;
+}
+
+export interface EvBatteryPackItem {
+  id: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  tags: string[];
+  href?: string;
+}
+
+export interface EnergyStorageSystemItem {
+  id: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  tags: string[];
+  href?: string;
+}
+
 // ----------------------------------------------------
 // Navigation Data
 // ----------------------------------------------------
@@ -678,6 +715,166 @@ export const blogPostsData: BlogPost[] = [
     ]
   }
 ];
+
+export const productQuickNavData: ProductQuickNavItem[] = [
+  {
+    id: "01",
+    badge: "8 Products",
+    title: "Battery packs",
+    description: "Jump to the battery packs catalogue.",
+    href: "#battery-packs",
+  },
+  {
+    id: "02",
+    badge: "15 Products",
+    title: "Battery management",
+    description: "Jump to the battery management catalogue.",
+    href: "#battery-management",
+  },
+  {
+    id: "03",
+    badge: "Engineered per site",
+    title: "Solar",
+    description: "Solar is delivered as a system, not a part number.",
+    href: "#solar",
+  },
+  {
+    id: "04",
+    badge: "4 Products",
+    title: "EV charging",
+    description: "Jump to the ev charging catalogue.",
+    href: "#ev-charging",
+  },
+];
+
+export const pillarsData: PillarItem[] = [
+  {
+    id: "battery-packs",
+    tag: "PILLAR",
+    title: "Battery packs",
+    description:
+      "Engineered to the vehicle programme or the load profile, so these carry a specification rather than a catalogue part number.",
+    linkText: "Battery packs overview \u2192",
+    linkHref: "/solutions/battery-packs",
+  },
+  {
+    id: "battery-management",
+    tag: "PILLAR",
+    title: "Battery management",
+    description:
+      "Low- and high-voltage packs built to the vehicle programme, on Tier-1 cells with our own battery management inside.",
+    linkText: "Battery management overview \u2192",
+    linkHref: "/solutions/battery-management",
+  },
+  {
+    id: "solar",
+    tag: "PILLAR",
+    title: "Solar",
+    description:
+      "Solar is delivered as a system, engineered against the load profile and storage backing rather than an off-the-shelf kit.",
+    linkText: "Solar overview \u2192",
+    linkHref: "/solutions/solar-ev-charging",
+  },
+  {
+    id: "ev-charging",
+    tag: "PILLAR",
+    title: "EV charging",
+    description:
+      "AC and DC hardware from 3.3 kW to 360 kW, connected natively to multi-CMS platforms.",
+    linkText: "EV charging overview \u2192",
+    linkHref: "/solutions/ev-charging",
+  },
+];
+
+export const evBatteryPacksData: EvBatteryPackItem[] = [
+  {
+    id: "01",
+    title: "2W Battery Pack",
+    description:
+      "A 72 V LFP pack for premium electric motorcycles, with integrated battery management and a patent-pending thermal design.",
+    imageSrc: "/images/products/products/img-1.png",
+    imageAlt: "2W Battery Pack",
+    tags: ["MOTORCYCLES", "SCOOTERS", "PREMIUM 2W"],
+    href: "/products/2w-battery-pack",
+  },
+  {
+    id: "02",
+    title: "48 V L5M Pack",
+    description:
+      "The passenger three-wheeler pack, in series production for Montra Super Auto \u2014 203 km on a charge, the highest range per charge in the segment.",
+    imageSrc: "/images/products/products/img-2.png",
+    imageAlt: "48 V L5M Pack",
+    tags: ["PASSENGER 3W", "FLEET TAXI"],
+    href: "/products/48v-l5m-pack",
+  },
+  {
+    id: "03",
+    title: "48 V L5N Pack",
+    description:
+      "The cargo three-wheeler pack on the same 48 V platform, rated for the heavier duty cycle and load profile.",
+    imageSrc: "/images/products/products/img-3.png",
+    imageAlt: "48 V L5N Pack",
+    tags: ["CARGO 3W", "LAST-MILE DELIVERY"],
+    href: "/products/48v-l5n-pack",
+  },
+  {
+    id: "04",
+    title: "Tractor Pack — 307 V",
+    description:
+      "A liquid-cooled high-voltage pack for electric tractors, with integrated disconnect and high-voltage interlock, built for continuous-duty.",
+    imageSrc: "/images/products/products/img-4.png",
+    imageAlt: "Tractor Pack — 307 V",
+    tags: ["ELECTRIC TRACTOR", "AGRICULTURE"],
+    href: "/products/tractor-pack-307v",
+  },
+  {
+    id: "05",
+    title: "Bus Pack — 352 V",
+    description:
+      "A liquid-cooled bus pack, stackable to vehicle-level energy, on the same battery-management family as the tractor pack.",
+    imageSrc: "/images/products/products/img-5.png",
+    imageAlt: "Bus Pack — 352 V",
+    tags: ["ELECTRIC BUS", "HEAVY COMMERCIAL"],
+    href: "/products/bus-pack-352v",
+  },
+];
+
+export const energyStorageSystemsData: EnergyStorageSystemItem[] = [
+  {
+    id: "01",
+    title: "Home Storage Stack",
+    description:
+      "A 51.2 V modular stack for houses, integrated with all major inverter brands and stackable as the household load grows.",
+    imageSrc: "/images/products/products/Energy-storage-systems/img-1.png",
+    imageAlt: "Home Storage Stack",
+    tags: ["RESIDENTIAL", "ROOFTOP SOLAR PAIRING"],
+    href: "/products/home-storage-stack",
+  },
+  {
+    id: "02",
+    title: "C&I Storage — Air-Cooled",
+    description:
+      "Cabinet-scale storage with a DC-coupled hybrid inverter and cabinet-level fire fighting, with our own battery and energy management.",
+    imageSrc: "/images/products/products/Energy-storage-systems/img-2.png",
+    imageAlt: "C&I Storage — Air-Cooled",
+    tags: ["FACTORY", "WAREHOUSE", "CAMPUS"],
+    href: "/products/ci-storage-air-cooled",
+  },
+  {
+    id: "03",
+    title: "C&I Storage — Liquid-Cooled",
+    description:
+      "Intelligent liquid cooling for balanced cell temperatures, with dual-level fire protection at both cabin and pack level, scalable to MWh class.",
+    imageSrc: "/images/products/products/Energy-storage-systems/img-3.png",
+    imageAlt: "C&I Storage — Liquid-Cooled",
+    tags: ["FACTORY", "DATA CENTRE", "MWH-CLASS"],
+    href: "/products/ci-storage-liquid-cooled",
+  },
+];
+
+
+
+
 
 
 
