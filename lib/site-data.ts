@@ -149,6 +149,26 @@ export interface EnergyStorageSystemItem {
   href?: string;
 }
 
+export interface ProductSpecRow {
+  parameter: string;
+  specification: string;
+}
+
+export interface ProductDetailItem {
+  slug: string;
+  aliases?: string[];
+  categoryBreadcrumb: string;
+  title: string;
+  description: string;
+  tags: string[];
+  imageSrc: string;
+  imageAlt: string;
+  contextLink?: string;
+  issuedNoteTitle?: string;
+  issuedNoteText?: string;
+  specifications?: ProductSpecRow[];
+}
+
 // ----------------------------------------------------
 // Navigation Data
 // ----------------------------------------------------
@@ -1076,6 +1096,732 @@ export const evChargingSystemsData: EnergyStorageSystemItem[] = [
     href: "/products/dc-charger-120-kw",
   },
 ];
+
+export const allProductsDetailData: ProductDetailItem[] = [
+  {
+    slug: "2w-battery-pack",
+    categoryBreadcrumb: "PRODUCTS · BATTERY PACKS - EV",
+    title: "2W Battery Pack",
+    description:
+      "A 72 V LFP pack for premium electric motorcycles, with integrated battery management and a patent-pending thermal design.",
+    tags: ["MOTORCYCLES", "SCOOTERS", "PREMIUM 2W"],
+    imageSrc: "/images/products/products/img-1.png",
+    imageAlt: "2W Battery Pack",
+    contextLink: "/solutions/battery-packs",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Premium Two-Wheeler EV" },
+      { parameter: "Nominal Voltage", specification: "72 V" },
+      { parameter: "Energy", specification: "3.24 kWh" },
+      { parameter: "Chemistry", specification: "LFP, Tier-1 Cells" },
+      { parameter: "Battery Management", specification: "Integrated, AIS-156 Certified" },
+      { parameter: "Thermal Design", specification: "Patent-Pending; Aluminium Modules With Copper Bus Bars" },
+      { parameter: "Certification", specification: "AIS-156" },
+      { parameter: "Factory Test", specification: "100% BMS Function, Charge/Discharge And Insulation (> 800 M\u03A9)" },
+    ],
+  },
+  {
+    slug: "48v-l5m-pack",
+    categoryBreadcrumb: "PRODUCTS · BATTERY PACKS - EV",
+    title: "48 V L5M Pack",
+    description:
+      "The passenger three-wheeler pack, in series production for Montra Super Auto \u2014 203 km on a charge, the highest range per charge in the segment.",
+    tags: ["PASSENGER 3W", "FLEET TAXI"],
+    imageSrc: "/images/products/products/img-2.png",
+    imageAlt: "48 V L5M Pack",
+    contextLink: "/solutions/battery-packs",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Passenger Three-Wheeler EV (L5M)" },
+      { parameter: "Nominal Voltage", specification: "48 V" },
+      { parameter: "Range per Charge", specification: "203 km" },
+      { parameter: "Chemistry", specification: "LFP, Tier-1 Cells" },
+      { parameter: "Battery Management", specification: "Integrated, AIS-156 Certified" },
+      { parameter: "Vehicle Integration", specification: "Montra Super Auto Series Production" },
+      { parameter: "Certification", specification: "AIS-156" },
+      { parameter: "Factory Test", specification: "100% BMS Function, Charge/Discharge And Insulation (> 800 M\u03A9)" },
+    ],
+  },
+  {
+    slug: "48v-l5n-pack",
+    categoryBreadcrumb: "PRODUCTS · BATTERY PACKS - EV",
+    title: "48 V L5N Pack",
+    description:
+      "The cargo three-wheeler pack on the same 48 V platform, rated for the heavier duty cycle and load profile.",
+    tags: ["CARGO 3W", "LAST-MILE DELIVERY"],
+    imageSrc: "/images/products/products/img-3.png",
+    imageAlt: "48 V L5N Pack",
+    contextLink: "/solutions/battery-packs",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Cargo Three-Wheeler EV (L5N) / Last-Mile Delivery" },
+      { parameter: "Nominal Voltage", specification: "48 V" },
+      { parameter: "Duty Rating", specification: "Commercial High-Duty Load Profile" },
+      { parameter: "Chemistry", specification: "LFP, Tier-1 Cells" },
+      { parameter: "Battery Management", specification: "Integrated, AIS-156 Certified" },
+      { parameter: "Thermal Design", specification: "Aluminium Modules With Copper Bus Bars" },
+      { parameter: "Certification", specification: "AIS-156" },
+      { parameter: "Factory Test", specification: "100% BMS Function, Charge/Discharge And Insulation (> 800 M\u03A9)" },
+    ],
+  },
+  {
+    slug: "tractor-pack-307v",
+    categoryBreadcrumb: "PRODUCTS · BATTERY PACKS - EV",
+    title: "Tractor Pack — 307 V",
+    description:
+      "A liquid-cooled high-voltage pack for electric tractors, with integrated disconnect and high-voltage interlock, built for continuous-duty.",
+    tags: ["ELECTRIC TRACTOR", "AGRICULTURE"],
+    imageSrc: "/images/products/products/img-4.png",
+    imageAlt: "Tractor Pack — 307 V",
+    contextLink: "/solutions/battery-packs",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Electric Tractor & Heavy Agricultural Equipment" },
+      { parameter: "Nominal Voltage", specification: "307 V" },
+      { parameter: "Cooling System", specification: "Liquid-Cooled Thermal Management" },
+      { parameter: "Chemistry", specification: "LFP, Tier-1 High-Power Cells" },
+      { parameter: "Safety Features", specification: "Integrated Disconnect & HVIL (High Voltage Interlock Loop)" },
+      { parameter: "Battery Management", specification: "Integrated High-Voltage VinciX BMS" },
+      { parameter: "Protection Rating", specification: "IP67 Industrial Enclosure" },
+      { parameter: "Factory Test", specification: "100% BMS Function, HV Isolation & Thermal Loop Testing" },
+    ],
+  },
+  {
+    slug: "bus-pack-352v",
+    categoryBreadcrumb: "PRODUCTS · BATTERY PACKS - EV",
+    title: "Bus Pack — 352 V",
+    description:
+      "A liquid-cooled bus pack, stackable to vehicle-level energy, on the same battery-management family as the tractor pack.",
+    tags: ["ELECTRIC BUS", "HEAVY COMMERCIAL"],
+    imageSrc: "/images/products/products/img-5.png",
+    imageAlt: "Bus Pack — 352 V",
+    contextLink: "/solutions/battery-packs",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Electric Bus & Heavy Commercial Vehicles" },
+      { parameter: "Nominal Voltage", specification: "352 V" },
+      { parameter: "Architecture", specification: "Stackable Modular Pack Architecture" },
+      { parameter: "Cooling System", specification: "Liquid-Cooled Thermal Management" },
+      { parameter: "Chemistry", specification: "LFP, Tier-1 Long-Life Cells" },
+      { parameter: "Battery Management", specification: "High-Voltage VinciX Master/Slave Family" },
+      { parameter: "Certification", specification: "AIS-038 Rev 2 / Heavy Duty Standards" },
+      { parameter: "Factory Test", specification: "100% BMS Function, HV Safety & Insulation (> 800 M\u03A9)" },
+    ],
+  },
+  {
+    slug: "home-storage-stack",
+    categoryBreadcrumb: "PRODUCTS · ENERGY STORAGE SYSTEMS",
+    title: "Home Storage Stack",
+    description:
+      "A 51.2 V modular stack for houses, integrated with all major inverter brands and stackable as the household load grows.",
+    tags: ["RESIDENTIAL", "ROOFTOP SOLAR PAIRING"],
+    imageSrc: "/images/products/products/Energy-storage-systems/img-1.png",
+    imageAlt: "Home Storage Stack",
+    contextLink: "/solutions/solar-ev-charging",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Residential Rooftop Solar & Home Energy Storage" },
+      { parameter: "Nominal Voltage", specification: "51.2 V" },
+      { parameter: "Architecture", specification: "Modular Stackable Design" },
+      { parameter: "Chemistry", specification: "Safe & Long-Life LFP Cells" },
+      { parameter: "Inverter Compatibility", specification: "Compatible with Major Hybrid & Off-Grid Inverters" },
+      { parameter: "Battery Management", specification: "Integrated VinciX Smart BMS" },
+      { parameter: "Monitoring", specification: "Local Status & Cloud Fleet Analytics" },
+      { parameter: "Factory Test", specification: "100% BMS Function, Charge/Discharge & Insulation Test" },
+    ],
+  },
+  {
+    slug: "ci-storage-air-cooled",
+    categoryBreadcrumb: "PRODUCTS · ENERGY STORAGE SYSTEMS",
+    title: "C&I Storage — Air-Cooled",
+    description:
+      "Cabinet-scale storage with a DC-coupled hybrid inverter and cabinet-level fire fighting, with our own battery and energy management.",
+    tags: ["FACTORY", "WAREHOUSE", "CAMPUS"],
+    imageSrc: "/images/products/products/Energy-storage-systems/img-2.png",
+    imageAlt: "C&I Storage — Air-Cooled",
+    contextLink: "/solutions/solar-ev-charging",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Commercial & Industrial (Factory, Warehouse, Campus)" },
+      { parameter: "Thermal Management", specification: "Cabinet-Scale Forced Air Cooling" },
+      { parameter: "Inverter Type", specification: "DC-Coupled Hybrid Inverter" },
+      { parameter: "Fire Suppression", specification: "Cabinet-Level Integrated Automated Suppression" },
+      { parameter: "Chemistry", specification: "LFP, Tier-1 Cells" },
+      { parameter: "Energy Management", specification: "Integrated BMS & EMS Control Layer" },
+      { parameter: "Grid Functions", specification: "Peak Shaving, Solar Self-Consumption & Arbitrage" },
+      { parameter: "Factory Test", specification: "100% System Commissioning & Safety Diagnostics" },
+    ],
+  },
+  {
+    slug: "ci-storage-liquid-cooled",
+    categoryBreadcrumb: "PRODUCTS · ENERGY STORAGE SYSTEMS",
+    title: "C&I Storage — Liquid-Cooled",
+    description:
+      "Intelligent liquid cooling for balanced cell temperatures, with dual-level fire protection at both cabin and pack level, scalable to MWh class.",
+    tags: ["FACTORY", "DATA CENTRE", "MWH-CLASS"],
+    imageSrc: "/images/products/products/Energy-storage-systems/img-3.png",
+    imageAlt: "C&I Storage — Liquid-Cooled",
+    contextLink: "/solutions/solar-ev-charging",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    specifications: [
+      { parameter: "Application", specification: "Commercial & Industrial / Data Centre / Utility Grid" },
+      { parameter: "Thermal Management", specification: "Intelligent Liquid Cooling for Uniform Cell Temp" },
+      { parameter: "Scalability", specification: "Containerised MWh-Class Architecture" },
+      { parameter: "Fire Suppression", specification: "Dual-Level Safety (Cabin & Pack Level)" },
+      { parameter: "Chemistry", specification: "High-Density Tier-1 LFP Cells" },
+      { parameter: "Control Layer", specification: "VinciX Multi-String Controller (MSC) Integration" },
+      { parameter: "Certification", specification: "Grid Integration & Industrial Safety Standards" },
+      { parameter: "Factory Test", specification: "100% BMS, HVAC & Fire Suppression Loop Verification" },
+    ],
+  },
+  {
+    slug: "vincix-bms-18s",
+    aliases: ["lv-bms-18s"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · LOW VOLTAGE",
+    title: "VinciX BMS-18S",
+    description:
+      "Seven to eighteen cells on a 48 V bus, AIS-156 certified, with an onboard precharge relay and integrated PDU for contactor drive.",
+    tags: ["Light EVs", "Motorcycles & scooters", "3-wheeler", "Home & industrial storage"],
+    imageSrc: "/images/products/products/bettery-manegement/low-voltage/img-1.jpg",
+    imageAlt: "VinciX BMS-18S",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Number of cells", specification: "7–18 cells (configurable per design requirement)" },
+      { parameter: "Cell chemistry", specification: "Chemistry agnostic" },
+      { parameter: "Cell voltage measurement accuracy", specification: "±5 mV" },
+      { parameter: "Cell voltage sampling time", specification: "20 ms" },
+      { parameter: "Cell balancing method", specification: "Dissipative" },
+      { parameter: "Cell balancing current", specification: "180 mA @ 4.2 V" },
+      { parameter: "Number of temperature sensor interfaces", specification: "9" },
+      { parameter: "Temperature measurement accuracy", specification: "±1 °C" },
+      { parameter: "Standby/Sleep mode", specification: "Yes" },
+      { parameter: "Charger/ECU communication type", specification: "SAE J1939 (29-bit ID) / CAN 2.0A/B (11-/29-bit ID)" },
+      { parameter: "Supported CAN speeds", specification: "Up to 1 Mbps" },
+      { parameter: "CAN ports", specification: "1 Isolated CAN" },
+      { parameter: "Remote monitoring module communication type", specification: "Isolated RS-485" },
+      { parameter: "Supported RS-485 speeds", specification: "Up to 1 Mbps" },
+      { parameter: "Local data monitoring", specification: "CAN/RS-485" },
+      { parameter: "Control IO", specification: "Non-isolated I/P: 5" },
+    ],
+  },
+  {
+    slug: "vincix-bms-36s",
+    aliases: ["lv-bms-36s"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · LOW VOLTAGE",
+    title: "VinciX BMS-36S",
+    description:
+      "Twenty to thirty-six cells on a 120 V bus. Railway-certified and deployed on Vande Bharat trainsets, with dual CAN and parallel-string operation.",
+    tags: ["Railway rolling stock", "Light commercial", "Stationary storage"],
+    imageSrc: "/images/products/products/bettery-manegement/low-voltage/img-2.jpg",
+    imageAlt: "VinciX BMS-36S",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Number of cells", specification: "20 – 36 Cells (Easily configurable based on design requirement)" },
+      { parameter: "Cell chemistry", specification: "Chemistry agnostic" },
+      { parameter: "Cell voltage measurement accuracy", specification: "+/- 5mV" },
+      { parameter: "Cell voltage sampling time", specification: "20 ms" },
+      { parameter: "Cell balancing method", specification: "Dissipative" },
+      { parameter: "Cell balancing current", specification: "180mA @4.2V" },
+      { parameter: "Number of temperature sensor interface", specification: "18" },
+      { parameter: "Temperature measurement accuracy", specification: "+/- 1 °C" },
+      { parameter: "Standby/Sleep mode", specification: "Yes" },
+      { parameter: "Charger/ECU communication type", specification: "SAE J1939 29 bit ID / Standard CAN 2.0 A/B 11/29 bit ID" },
+      { parameter: "Supported CAN speeds", specification: "Up to 1Mbps" },
+      { parameter: "CAN ports", specification: "2 Isolated CAN" },
+      { parameter: "Remote monitoring module communication type", specification: "Isolated CAN" },
+      { parameter: "Local data monitoring", specification: "CAN" },
+      { parameter: "Parallel Battery Support", specification: "Yes" },
+      { parameter: "Control IO", specification: "Isolated O/P: 3 (12V)" },
+    ],
+  },
+  {
+    slug: "vincix-mosfet-bms",
+    aliases: ["mosfet-bms"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · LOW VOLTAGE",
+    title: "VinciX MOSFET BMS",
+    description:
+      "Solid-state switching in place of contactors, at 100, 150 or 200 A, with an onboard power distribution unit.",
+    tags: ["2-wheeler", "3-wheeler", "Light EVs"],
+    imageSrc: "/images/products/products/bettery-manegement/low-voltage/img-3.jpg",
+    imageAlt: "VinciX MOSFET BMS",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Number of cells", specification: "7 – 21 Cells (Easily configurable based on design requirement)" },
+      { parameter: "Cell chemistry", specification: "Chemistry agnostic" },
+      { parameter: "Cell voltage measurement accuracy", specification: "+/- 10mV" },
+      { parameter: "Cell voltage sampling time", specification: "20 ms" },
+      { parameter: "Cell balancing method", specification: "Dissipative" },
+      { parameter: "Cell balancing current", specification: "150mA @4.2V" },
+      { parameter: "Number of temperature sensor interface", specification: "7" },
+      { parameter: "Temperature measurement accuracy", specification: "+/- 1 °C" },
+      { parameter: "Standby/Sleep mode", specification: "Yes" },
+      { parameter: "Charger/ECU communication type", specification: "SAE J1939 29 bit ID / Standard CAN 2.0 A/B 11/29 bit ID" },
+      { parameter: "Supported CAN speeds", specification: "Up to 1Mbps" },
+      { parameter: "CAN ports", specification: "1 CAN" },
+      { parameter: "Control IO", specification: "External Buzzer, Ignition" },
+      { parameter: "Precharge Resistor", specification: "200 Ohms/ 15Watts (Can be Configurable)" },
+      { parameter: "Continuous Discharge Current", specification: "100A/150A/200A" },
+      { parameter: "Peak Discharge Current", specification: "150A/300A/400A @ 10Sec" },
+    ],
+  },
+  {
+    slug: "vincix-hv-bms-master",
+    aliases: ["hv-bms"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · HIGH VOLTAGE",
+    title: "VinciX HV-BMS Master",
+    description:
+      "The high-voltage master controller — 13 V to 1500 V system range, up to 360 cells in series across the slave chain.",
+    tags: ["Bus & truck", "Tractor", "High-voltage storage"],
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-1.jpg",
+    imageAlt: "VinciX HV-BMS Master",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "System Voltage Range", specification: "13V-1500V" },
+      { parameter: "Number of Cells in series", specification: "6-360 Cells" },
+      { parameter: "Model Number", specification: "VinciX_HV_Master" },
+      { parameter: "Microcontroller", specification: "STM32F4" },
+      { parameter: "CAN Communication", specification: "Dual CAN 2.0 or J1939 Over CAN" },
+      { parameter: "RS485 Communication", specification: "RS485 or Modbus Over RS485" },
+      { parameter: "Isolation Rating", specification: "3.5 kV RMS Isolation for RS485" },
+      { parameter: "Input Voltage", specification: "12V - 60V (Configured Based on requirement)" },
+      { parameter: "Number of Slaves Supported", specification: "20 Slaves" },
+      { parameter: "Data Storage", specification: "On Board SD Card" },
+      { parameter: "High Voltage Measurement Channel", specification: "4 Isolated Channel" },
+      { parameter: "High Voltage Measurement Range", specification: "0V - 1000V" },
+      { parameter: "High Voltage Measurement Accuracy", specification: "+/- 1V" },
+      { parameter: "Current Measurement Interface", specification: "Hall Current Sensor" },
+      { parameter: "General Purpose Input Output", specification: "2 Channel for sensing positive and negative contactor sense" },
+      { parameter: "Protections", specification: "Discharge and Charge Over Temperature, Under Temperature, Short circuit" },
+    ],
+  },
+  {
+    slug: "vincix-hv-bmu-54s",
+    aliases: ["hv-bmu-54s"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · HIGH VOLTAGE",
+    title: "VinciX HV-BMU-54S",
+    description:
+      "Thirty-six to fifty-four cells with twenty-seven thermistor channels, CAN, RS-485 and onboard SD logging.",
+    tags: ["Bus", "Truck", "Tractor"],
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-2.jpg",
+    imageAlt: "VinciX HV-BMU-54S",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Power supply", specification: "9V - 36V DC" },
+      { parameter: "Number of cells", specification: "36 - 54 Cells (Software configurable)" },
+      { parameter: "Cell chemistry", specification: "Chemistry agnostic" },
+      { parameter: "Cell voltage measurement accuracy", specification: "+/- 5mV" },
+      { parameter: "Cell voltage sampling time", specification: "20 ms" },
+      { parameter: "Cell balancing method", specification: "Dissipative" },
+      { parameter: "Cell balancing current", specification: "420mA @4.2V" },
+      { parameter: "Number of temperature sensor interface", specification: "27" },
+      { parameter: "Temperature measurement accuracy", specification: "+/- 1 °C" },
+      { parameter: "Standby/Sleep mode", specification: "Yes" },
+      { parameter: "Charger/ECU communication type", specification: "CAN 2.0 A/B 11/29 bit ID" },
+      { parameter: "Supported CAN speeds", specification: "Up to 1Mbps" },
+      { parameter: "CAN ports", specification: "1 Isolated CAN" },
+      { parameter: "RS-485 communication", specification: "Isolated RS-485" },
+      { parameter: "Supported RS-485 speeds", specification: "Up to 1Mbps" },
+      { parameter: "Digital inputs", specification: "4" },
+    ],
+  },
+  {
+    slug: "vincix-hv-bmu-108s",
+    aliases: ["hv-bmu-108s"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · HIGH VOLTAGE",
+    title: "VinciX HV-BMU-108S",
+    description:
+      "Seventy-two to one hundred and eight cells with thirty-six thermistor channels. ASIL-D ready, with SD logging.",
+    tags: ["Bus", "Heavy commercial", "Grid storage"],
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-3.jpg",
+    imageAlt: "VinciX HV-BMU-108S",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Power supply", specification: "9V - 36V DC" },
+      { parameter: "Number of cells", specification: "72 - 108 Cells (Software configurable)" },
+      { parameter: "Cell chemistry", specification: "Chemistry agnostic" },
+      { parameter: "Cell voltage measurement accuracy", specification: "+/- 5mV" },
+      { parameter: "Cell voltage sampling time", specification: "20 ms" },
+      { parameter: "Cell balancing method", specification: "Dissipative" },
+      { parameter: "Cell balancing current", specification: "420mA @4.2V" },
+      { parameter: "Number of temperature sensor interface", specification: "36" },
+      { parameter: "Temperature measurement accuracy", specification: "+/- 1 °C" },
+      { parameter: "Standby/Sleep mode", specification: "Yes" },
+      { parameter: "Charger/ECU communication type", specification: "CAN 2.0 A/B 11/29 bit ID" },
+      { parameter: "Supported CAN speeds", specification: "Up to 1Mbps" },
+      { parameter: "CAN ports", specification: "1 Isolated CAN" },
+      { parameter: "RS-485 communication", specification: "Isolated RS-485" },
+      { parameter: "Supported RS-485 speeds", specification: "Up to 1Mbps" },
+      { parameter: "Digital inputs", specification: "4" },
+    ],
+  },
+  {
+    slug: "vincix-monolithic-hv-bms",
+    aliases: ["monolithic-hv-bms"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · HIGH VOLTAGE",
+    title: "VinciX Monolithic HV-BMS",
+    description:
+      "One board instead of a master and a slave chain — 108 cells at 400 V, for light commercial vehicles where board count matters more than modularity.",
+    tags: ["LCV", "4-wheeler", "Compact HV packs"],
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-4.jpg",
+    imageAlt: "VinciX Monolithic HV-BMS",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Power supply", specification: "9V - 36V DC" },
+      { parameter: "Number of cells", specification: "72 - 108 Cells (Software configurable)" },
+      { parameter: "Cell chemistry", specification: "Chemistry agnostic" },
+      { parameter: "Cell voltage measurement accuracy", specification: "+/- 5mV" },
+      { parameter: "Cell balancing method", specification: "Dissipative" },
+      { parameter: "Cell balancing current", specification: "420mA @4.2V" },
+      { parameter: "Number of temperature sensor interface", specification: "14" },
+      { parameter: "Temperature measurement accuracy", specification: "+/- 1 °C" },
+      { parameter: "Digital inputs", specification: "7" },
+      { parameter: "Digital outputs", specification: "8" },
+      { parameter: "Current sensing channels", specification: "1" },
+      { parameter: "HV voltage sensing channels", specification: "4" },
+      { parameter: "Operating voltage", specification: "Up to 400V DC" },
+      { parameter: "CAN communication", specification: "2x CAN ports" },
+      { parameter: "RS-485 communication", specification: "1x RS-485 port" },
+      { parameter: "Local data logging", specification: "SD Card" },
+    ],
+  },
+  {
+    slug: "vincix-ev-bdu",
+    aliases: ["ev-bdu"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · HIGH VOLTAGE",
+    title: "VinciX EV-BDU",
+    description:
+      "The battery disconnect unit: 400 to 750 V at 600 A, twelve HV contactors, with HVIL, insulation monitoring and an IP67 enclosure.",
+    tags: ["Bus", "Truck", "Tractor", "HV storage"],
+    imageSrc: "/images/products/products/bettery-manegement/high-voltage/img-5.jpg",
+    imageAlt: "VinciX EV-BDU",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Operating voltage range", specification: "400V - 750V DC" },
+      { parameter: "Total current capacity", specification: "600A" },
+      { parameter: "Topology", specification: "3-In / 2-Out / 2-Charge" },
+      { parameter: "HV contactors", specification: "12x HV Contator (1000V, 400A)" },
+      { parameter: "Main contactors (K3/K4/K10/K6)", specification: "400A rated" },
+      { parameter: "Charge contactors (K1/K2/K7/K8)", specification: "300A rated" },
+      { parameter: "Precharge contactor (K5)", specification: "20A rated" },
+      { parameter: "Precharge resistor", specification: "50Ω, 150W" },
+      { parameter: "Current sensors", specification: "3x (±700A, Fluxgate, CAN)" },
+      { parameter: "Manual service disconnect", specification: "3x MSD with 630A fuse" },
+      { parameter: "BMS master MCU", specification: "VinciX HV BMS" },
+      { parameter: "CAN communication", specification: "3x CAN 2.0B" },
+      { parameter: "LV connectors", specification: "4x (DC/DC, Diagnostics, Battery CAN, Vehicle CAN)" },
+      { parameter: "Enclosure material", specification: "MS" },
+      { parameter: "Enclosure dimensions", specification: "585 x 563 x 230 mm" },
+      { parameter: "Protection rating", specification: "IP67" },
+    ],
+  },
+  {
+    slug: "vincix-ess-lmu",
+    aliases: ["ess-lmu"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · ENERGY STORAGE",
+    title: "VinciX ESS-LMU",
+    description:
+      "Tier one — the module slave. Six to eighteen cells per unit, daisy-chained over ISO-SPI or CAN up the rack.",
+    tags: ["Residential storage", "C&I storage", "Grid storage"],
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-1.jpg",
+    imageAlt: "VinciX ESS-LMU",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Cell Chemistry", specification: "Chemistry Agnostic" },
+      { parameter: "Number of Cells", specification: "6 - 18 Cells (Software configurable based on requirement)" },
+      { parameter: "Cell Voltage Measurement Accuracy", specification: "+/- 5mV" },
+      { parameter: "Cell Balancing Current", specification: "420mA @4.2V" },
+      { parameter: "Number of Temperature sensor", specification: "9" },
+      { parameter: "Communication with Master Board", specification: "ISO-SPI" },
+      { parameter: "Dimension", specification: "90.3 * 93.3 * 15 mm (L*W*H)" },
+    ],
+  },
+  {
+    slug: "vincix-ess-pdu",
+    aliases: ["ess-pdu"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · ENERGY STORAGE",
+    title: "VinciX ESS-PDU",
+    description:
+      "Tier two — the rack master. Up to twenty LMUs per rack, with the contactor stack, manual service disconnect and insulation monitoring.",
+    tags: ["C&I storage", "Grid storage"],
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-2.jpg",
+    imageAlt: "VinciX ESS-PDU",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Power supply", specification: "Option1: External AC Supply" },
+      { parameter: "Number of LMU", specification: "Up to 20 (Easily configurable based on design requirement)" },
+      { parameter: "Status LED", specification: "Power Supply, Fault and Ok" },
+      { parameter: "External display interface", specification: "4.2 inch/7 inch/ 10-inch touch screen display" },
+      { parameter: "Current Sense type", specification: "Hall Sensor" },
+      { parameter: "Master BMS", specification: "VinciX_HV_BMS" },
+      { parameter: "PCS communication type", specification: "Modbus over RS485" },
+      { parameter: "Supported CAN speeds", specification: "Up to 1Mbps" },
+      { parameter: "CAN ports", specification: "2 Isolated CAN" },
+      { parameter: "Remote monitoring module communication type", specification: "Isolated RS-485" },
+      { parameter: "Supported RS-485 speeds", specification: "Up to 1Mbps" },
+      { parameter: "Local data monitoring", specification: "CAN/RS485" },
+      { parameter: "Control IO", specification: "Isolated O/P: 2" },
+      { parameter: "Dimension", specification: "3U Rack Mounted" },
+    ],
+  },
+  {
+    slug: "vincix-msc",
+    aliases: ["ess-msc"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · ENERGY STORAGE",
+    title: "VinciX MSC",
+    description:
+      "Tier three — the multi-string controller. Up to twenty racks in parallel, presenting one interface to the power conversion system.",
+    tags: ["Grid storage", "Multi-string BESS"],
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-3.jpg",
+    imageAlt: "VinciX MSC",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Power supply", specification: "External 12V/24V" },
+      { parameter: "Number of Parallel PDU", specification: "Up to 20 (Easily configurable based on design requirement)" },
+    ],
+  },
+  {
+    slug: "vincix-ess-mosfet-bms",
+    aliases: ["ess-mosfet-bms"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · ENERGY STORAGE",
+    title: "VinciX ESS MOSFET BMS",
+    description:
+      "Seven to sixteen cells with solid-state switching at 100, 150 or 200 A, for low-voltage stationary storage.",
+    tags: ["Home storage", "Telecom", "Small C&I"],
+    imageSrc: "/images/products/products/bettery-manegement/energy-storage/img-4.jpg",
+    imageAlt: "VinciX ESS MOSFET BMS",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Number of cells", specification: "7 \u2013 16 Cells (Software configurable based on requirement)" },
+      { parameter: "Cell chemistry", specification: "Chemistry agnostic" },
+      { parameter: "Cell voltage measurement accuracy", specification: "\u00B110 mV" },
+      { parameter: "Cell balancing method", specification: "Dissipative" },
+      { parameter: "Cell balancing current", specification: "150 mA @ 4.2 V" },
+      { parameter: "Continuous discharge current", specification: "100 A / 150 A / 200 A" },
+      { parameter: "Peak discharge current", specification: "150 A / 300 A / 400 A @ 10s" },
+      { parameter: "Protection features", specification: "Over-voltage, Under-voltage, Over-current, Short circuit & Over-temperature" },
+    ],
+  },
+  {
+    slug: "navas-vts-4g",
+    aliases: ["vts-4g"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · TRANSIT SYSTEMS",
+    title: "NAVAS VTS-4G",
+    description:
+      "AIS-140 vehicle tracking on 4G LTE, with multi-constellation GNSS, three isolated CAN FD ports and over-the-air updates.",
+    tags: ["Bus fleets", "Commercial vehicles", "Public transport"],
+    imageSrc: "/images/products/products/bettery-manegement/transit-systems/img-1.jpg",
+    imageAlt: "NAVAS VTS-4G",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Application", specification: "Bus Fleets, Commercial Vehicles & Public Transport" },
+      { parameter: "Cellular Connectivity", specification: "4G LTE Module with 2G Fallback" },
+      { parameter: "Positioning System", specification: "Multi-Constellation GNSS (GPS, GLONASS, NavIC)" },
+      { parameter: "CAN Interface", specification: "3x Isolated CAN FD Ports" },
+      { parameter: "Certification", specification: "AIS-140 Certified" },
+      { parameter: "Firmware Updates", specification: "Over-The-Air (OTA) Remote Upgrades" },
+      { parameter: "Internal Memory", specification: "Onboard Data Logging for Offline Buffering" },
+      { parameter: "Power Input", specification: "9V \u2013 36V DC Automotive Power Supply" },
+    ],
+  },
+  {
+    slug: "navas-pis",
+    aliases: ["pis"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · TRANSIT SYSTEMS",
+    title: "NAVAS PIS",
+    description:
+      "Passenger Information System providing audio-visual announcements, display integration, and transit control.",
+    tags: ["City buses", "Intercity coaches", "Rail"],
+    imageSrc: "/images/products/products/bettery-manegement/transit-systems/img-2.jpg",
+    imageAlt: "NAVAS PIS",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Application", specification: "City Buses, Intercity Coaches & Rail Transit" },
+      { parameter: "System Functions", specification: "Audio Announcements & LED/LCD Destination Display Control" },
+      { parameter: "Vehicle Interface", specification: "Ethernet & Isolated CAN Bus Integration" },
+      { parameter: "Operating Voltage", specification: "18V \u2013 36V DC Railway & Automotive Grade" },
+      { parameter: "Storage & Audio", specification: "Multilingual Voice Announcement Engine" },
+      { parameter: "Reliability", specification: "Shock & Vibration Compliant (EN 50155)" },
+    ],
+  },
+  {
+    slug: "navas-its",
+    aliases: ["its"],
+    categoryBreadcrumb: "PRODUCTS · BATTERY MANAGEMENT · TRANSIT SYSTEMS",
+    title: "NAVAS ITS",
+    description:
+      "Intelligent Transit System for fleet management, depot operations, driver safety compliance, and central monitoring.",
+    tags: ["Bus fleets", "Depot operations", "Safety compliance"],
+    imageSrc: "/images/products/products/bettery-manegement/transit-systems/img-3.jpg",
+    imageAlt: "NAVAS ITS",
+    contextLink: "/solutions/battery-management",
+    specifications: [
+      { parameter: "Application", specification: "Bus Fleets, Depot Operations & Transit Authorities" },
+      { parameter: "Feature Suite", specification: "Depot Management, Driver Diagnostics & Route Analytics" },
+      { parameter: "Cloud Integration", specification: "Real-Time Telematics & Central Monitoring API" },
+      { parameter: "Compliance", specification: "Automotive & Fleet Safety Standards" },
+      { parameter: "System Interface", specification: "Dual Isolated CAN & Ethernet Interfaces" },
+    ],
+  },
+  {
+    slug: "ac-charger-3-3-kw",
+    categoryBreadcrumb: "PRODUCTS · EV CHARGING",
+    title: "AC Charger \u2014 3.3 kW",
+    description:
+      "A wall-mounted AC unit for homes and workplaces, with RFID authentication and integrated cable management.",
+    tags: ["HOME", "WORKPLACE", "APARTMENT"],
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-1.jpg",
+    imageAlt: "AC Charger \u2014 3.3 kW",
+    contextLink: "/solutions/ev-charging",
+    specifications: [
+      // { parameter: "Application", specification: "Home, Workplace & Apartment Complex EV Charging" },
+      // { parameter: "Power Output", specification: "3.3 kW AC (Single Phase, 230 V)" },
+      // { parameter: "Charging Connector", specification: "IEC 62196-2 / Type 2 Connector" },
+      // { parameter: "User Interface", specification: "LED Status Indicators & RFID Authentication" },
+      // { parameter: "Communication", specification: "Wi-Fi / Bluetooth / OCPP 1.6J Ready" },
+      // { parameter: "Protection Rating", specification: "IP65 Weatherproof Enclosure" },
+      // { parameter: "Safety Features", specification: "Overcurrent, Residual Current & Surge Protection" },
+      // { parameter: "Factory Test", specification: "100% Full Load Electrical Safety & Communication Test" },
+    ],
+  },
+  {
+    slug: "dc-charger-30-kw",
+    categoryBreadcrumb: "PRODUCTS · EV CHARGING",
+    title: "DC Charger \u2014 30 kW",
+    description:
+      "A compact DC fast charger for fleet depots and retail forecourts, with a full operator display.",
+    tags: ["FLEET DEPOT", "FORECOURT", "3W & 4W"],
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-2.jpg",
+    imageAlt: "DC Charger \u2014 30 kW",
+    contextLink: "/solutions/ev-charging",
+    specifications: [
+      // { parameter: "Application", specification: "Fleet Depots & Commercial Retail Forecourts (3W & 4W)" },
+      // { parameter: "Power Output", specification: "30 kW DC Fast Charging" },
+      // { parameter: "Output Voltage Range", specification: "200 V \u2013 750 V DC" },
+      // { parameter: "Charging Connector", specification: "CCS2 / CHAdeMO / GB/T Support" },
+      // { parameter: "User Interface", specification: "Full Operator Touchscreen Display & RFID" },
+      // { parameter: "Communication Protocol", specification: "OCPP 1.6J Native Charge Management Platform" },
+      // { parameter: "Protection Rating", specification: "IP54 Outdoor Rated Enclosure" },
+      // { parameter: "Factory Test", specification: "100% ARAI & Full Load DC Charging Safety Diagnostics" },
+    ],
+  },
+  {
+    slug: "dc-charger-60-kw",
+    categoryBreadcrumb: "PRODUCTS · EV CHARGING",
+    title: "DC Charger \u2014 60 kW",
+    description:
+      "A dual-connector DC unit, ARAI tested, charging two vehicles at once.",
+    tags: ["PUBLIC CHARGING", "FLEET DEPOT"],
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-3.jpg",
+    imageAlt: "DC Charger \u2014 60 kW",
+    contextLink: "/solutions/ev-charging",
+    specifications: [
+      // { parameter: "Application", specification: "Public Charging Stations & Fleet Depots" },
+      // { parameter: "Power Output", specification: "60 kW Dual-Gun DC Fast Charging" },
+      // { parameter: "Load Balancing", specification: "Dynamic Load Sharing (Simultaneous Charging)" },
+      // { parameter: "Certification", specification: "ARAI Tested & Certified" },
+      // { parameter: "User Interface", specification: "Interactive Touchscreen Display, RFID & App Support" },
+      // { parameter: "Communication Protocol", specification: "OCPP 1.6J Native with Plugzmart Relay CMS" },
+      // { parameter: "Protection Rating", specification: "IP54 Heavy-Duty Enclosure" },
+      // { parameter: "Factory Test", specification: "100% Dual-Gun Load Testing & Grid Safety Verification" },
+    ],
+  },
+  {
+    slug: "dc-charger-120-kw",
+    categoryBreadcrumb: "PRODUCTS · EV CHARGING",
+    title: "DC Charger \u2014 120 kW",
+    description:
+      "Highway-grade CCS charging with dual cables and a full operator display, part of a range extending to 360 kW.",
+    tags: ["HIGHWAY", "PUBLIC CHARGING", "BUS & TRUCK"],
+    imageSrc: "/images/products/products/bettery-manegement/ev-chargers/img-4.jpg",
+    imageAlt: "DC Charger \u2014 120 kW",
+    contextLink: "/solutions/ev-charging",
+    specifications: [
+      // { parameter: "Application", specification: "Highway Charging Hubs, Commercial Fleets, E-Buses & E-Trucks" },
+      // { parameter: "Power Output", specification: "120 kW (Scalable Architecture up to 360 kW)" },
+      // { parameter: "Max Output Current", specification: "Up to 250 A Continuous per Connector" },
+      // { parameter: "Charging Connectors", specification: "Dual CCS2 Heavy-Duty Cooled Cables" },
+      // { parameter: "User Interface", specification: "High-Brightness Touchscreen Display & RFID Reader" },
+      // { parameter: "Communication Protocol", specification: "OCPP 1.6J / OCPP 2.0.1 Ready with Smart Grid Integration" },
+      // { parameter: "Safety Features", specification: "Surge Protection, Insulation Monitoring & Emergency Stop" },
+      // { parameter: "Factory Test", specification: "100% High-Power Load Verification & Safety Isolation Test" },
+    ],
+  }
+];
+
+export function getProductBySlug(slug: string): ProductDetailItem {
+  const found = allProductsDetailData.find(
+    (p) => p.slug === slug || p.aliases?.includes(slug)
+  );
+  if (found) return found;
+
+  const allCards = [
+    ...evBatteryPacksData,
+    ...energyStorageSystemsData,
+    ...lowVoltageManagementData,
+    ...highVoltageManagementData,
+    ...energyStorageManagementSystemsData,
+    ...transitSystemsData,
+    ...evChargingSystemsData,
+  ];
+
+  const matchedCard = allCards.find(
+    (c) => c.href?.endsWith(slug) || c.href === `/products/${slug}`
+  );
+
+  if (matchedCard) {
+    return {
+      slug,
+      categoryBreadcrumb: "PRODUCTS · SPECIFICATION",
+      title: matchedCard.title,
+      description: matchedCard.description,
+      tags: matchedCard.tags || ["ENGINEERED", "APPLICATION SPECIFIC"],
+      imageSrc: matchedCard.imageSrc,
+      imageAlt: matchedCard.imageAlt || matchedCard.title,
+      contextLink: "/solutions",
+      issuedNoteTitle: "Issued per application",
+      issuedNoteText:
+        "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+    };
+  }
+
+  const formattedTitle = slug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  return {
+    slug,
+    categoryBreadcrumb: "PRODUCTS · ENERVAA HARDWARE",
+    title: formattedTitle,
+    description:
+      "Engineered to the vehicle programme or the load profile, with our own battery management and diagnostic coverage inside.",
+    tags: ["SPECIFICATION", "LOCALIZED SUPPLY"],
+    imageSrc: "/images/products/products/img-1.png",
+    imageAlt: formattedTitle,
+    contextLink: "/solutions",
+    issuedNoteTitle: "Issued per application",
+    issuedNoteText:
+      "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
+  };
+}
+
+
 
 
 
