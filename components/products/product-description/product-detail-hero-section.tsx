@@ -26,7 +26,7 @@ export default function ProductDetailHeroSection({
   };
 
   return (
-    <section className="w-full bg-white pt-20 sm:pt-36 lg:pt-36 pb-10 sm:pb-10 lg:pb-12 relative">
+    <section className="w-full bg-white pt-20 sm:pt-38 lg:pt-38 pb-10 sm:pb-10 lg:pb-12 relative">
       {/* Inner Pale Green Band */}
       <div className="w-full bg-[#F5F7EE] py-10 sm:py-6 lg:py-6 relative">
         <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
