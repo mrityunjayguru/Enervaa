@@ -28,6 +28,20 @@ export interface IndustryItem {
   href?: string;
 }
 
+export interface IndustrySupplyCapability {
+  label: string;
+  value: string;
+}
+
+export interface IndustrySupplyItem {
+  id: string;
+  title: string;
+  imageSrc: string;
+  imageAlt: string;
+  href?: string;
+  capabilities: IndustrySupplyCapability[];
+}
+
 export interface LifecycleStep {
   stepNumber: string;
   title: string;
@@ -311,6 +325,70 @@ export const industriesData: IndustryItem[] = [
     description: "Rooftop solar with a modular home battery and AC charging.",
     iconSrc: "/icons/solar-house.svg",
     href: "/industries/residential",
+  },
+];
+
+export const industrySupplyData: IndustrySupplyItem[] = [
+  {
+    id: "01",
+    title: "Automotive & fleet",
+    imageSrc: "/images/industries/img-1.png",
+    imageAlt: "Automotive & fleet charging station",
+    href: "/industries/automotive",
+    capabilities: [
+      { label: "Battery Packs", value: "48–352 V EV packs" },
+      { label: "Battery Management", value: "VinciX BMS · TuringX cloud" },
+      { label: "EV Charging", value: "Depot AC & DC" },
+    ],
+  },
+  {
+    id: "02",
+    title: "Rail & transit",
+    imageSrc: "/images/industries/img-2.png",
+    imageAlt: "Rail & transit train",
+    href: "/industries/rail-transit",
+    capabilities: [
+      { label: "Battery Packs", value: "120 V rolling-stock packs" },
+      { label: "Battery Management", value: "LV-BMS-36S · NAVAS PIS & ITS" },
+    ],
+  },
+  {
+    id: "03",
+    title: "Commercial & industrial",
+    imageSrc: "/images/industries/img-3.png",
+    imageAlt: "Commercial & industrial solar facility",
+    href: "/industries/commercial-industrial",
+    capabilities: [
+      { label: "Battery Packs", value: "48–261 kWh storage" },
+      { label: "Battery Management", value: "ESS BMS + EMS" },
+      { label: "Solar", value: "Factory & campus roofs" },
+      { label: "EV Charging", value: "Workplace & fleet depot" },
+    ],
+  },
+  {
+    id: "04",
+    title: "Utility & grid",
+    imageSrc: "/images/industries/img-4.png",
+    imageAlt: "Utility & grid power station",
+    href: "/industries/utility-grid",
+    capabilities: [
+      { label: "Battery Packs", value: "MWh-class storage" },
+      { label: "Battery Management", value: "Three-tier 1500 V control" },
+      { label: "Solar", value: "Solar parks & floating PV" },
+    ],
+  },
+  {
+    id: "05",
+    title: "Residential",
+    imageSrc: "/images/industries/img-5.png",
+    imageAlt: "Residential rooftop solar",
+    href: "/industries/residential",
+    capabilities: [
+      { label: "Battery Packs", value: "51.2 V home stack" },
+      { label: "Battery Management", value: "In-house BMS" },
+      { label: "Solar", value: "2–7.5 kW rooftop" },
+      { label: "EV Charging", value: "AC home charger" },
+    ],
   },
 ];
 
@@ -1820,10 +1898,379 @@ export function getProductBySlug(slug: string): ProductDetailItem {
       "This product is built to the programme or the load profile, so its datasheet is issued against your configuration rather than published as a catalogue sheet.",
   };
 }
+export interface IndustrySupplyCard {
+  supplyNumber: string;
+  title: string;
+  description: string;
+}
+
+export interface IndustryCaseStudyCard {
+  categoryTag: string;
+  title: string;
+  imageSrc: string;
+  description?: string;
+  imageAlt: string;
+  href?: string;
+  contextLink?: string;
+  contextLinkText?: string;
+}
+
+export interface IndustryDetailSectionData {
+  id: string;
+  industryTag: string;
+  title: string;
+  description: string;
+  supplies: IndustrySupplyCard[];
+  caseStudies: IndustryCaseStudyCard[];
+  tags?: string[];
+}
+
+export const automotiveFleetDetailData: IndustryDetailSectionData = {
+  id: "01",
+  industryTag: "INDUSTRY 01",
+  title: "Automotive & fleet",
+  description:
+    "Battery packs built on Tier-1 cells with AIS-156 battery management designed in-house, plus fleet telematics and cell-level analytics on the same stack.",
+  supplies: [
+    {
+      supplyNumber: "WE SUPPLY · 01",
+      title: "Battery packs",
+      description:
+        "48 V and 72 V low-voltage packs for 2W and 3W; 307–352 V liquid-cooled packs for tractors, buses and LCVs.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 02",
+      title: "Battery management",
+      description:
+        "VinciX LV and HV battery management, with the TuringX cloud platform for fleet and cell-level analytics.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 03",
+      title: "EV charging",
+      description:
+        "Depot AC and DC charging with OCPP-native management software behind it.",
+    },
+  ],
+  caseStudies: [
+    {
+      categoryTag: "PASSENGER 3W · TI CLEAN MOBILITY",
+      title: "Montra Super Auto",
+      imageSrc: "/images/industries/automotive-fleet/img-1.png",
+      imageAlt: "Montra Super Auto Passenger 3W",
+      href: "/industries/automotive",
+    },
+    {
+      categoryTag: "Cargo 3W · TI CLEAN MOBILITY",
+      title: "Montra Super Cargo",
+      imageSrc: "/images/industries/automotive-fleet/img-2.png",
+      imageAlt: "Montra Super Cargo Fleet Vehicle",
+      href: "/industries/automotive",
+    },
+    {
+      categoryTag: "Electric tractor",
+      title: "Montra E40",
+      imageSrc: "/images/industries/automotive-fleet/img-3.png",
+      imageAlt: "Montra E40 Electric Vehicle",
+      href: "/industries/automotive",
+    },
+    {
+      categoryTag: "Passenger 3W",
+      title: "Greaves Eltra City",
+      imageSrc: "/images/industries/automotive-fleet/img-4.png",
+      imageAlt: "Greaves Eltra City Electric Vehicle",
+      href: "/industries/automotive",
+    },
+    {
+      categoryTag: "Cargo 3W",
+      title: "Grevol Evaum",
+      imageSrc: "/images/industries/automotive-fleet/img-5.png",
+      imageAlt: "Grevol Evaum Electric Vehicle",
+      href: "/industries/automotive",
+    },
+    {
+      categoryTag: "Premium 2W",
+      title: "Revolt RV-Series",
+      imageSrc: "/images/industries/automotive-fleet/img-6.png",
+      imageAlt: "Revolt RV-Series Electric Vehicle",
+      href: "/industries/automotive",
+    },
+  ],
+};
+
+export const railTransitDetailData: IndustryDetailSectionData = {
+  id: "02",
+  industryTag: "INDUSTRY 02",
+  title: "Rail & transit",
+  description:
+    "The LV-BMS-36S — 20 to 36 cells on a 120 V bus, ±5 mV measurement, dual CAN and parallel-string operation — is railway-certified and deployed on Vande Bharat trainsets. Passenger information and intelligent transport run on the same platform.",
+  supplies: [
+    {
+      supplyNumber: "WE SUPPLY · 01",
+      title: "Battery packs",
+      description:
+        "48 V and 72 V low-voltage packs for 2W and 3W; 307–352 V liquid-cooled packs for tractors, buses and LCVs.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 02",
+      title: "Battery management",
+      description:
+        "VinciX LV and HV battery management, with the TuringX cloud platform for fleet and cell-level analytics.",
+    },
+  ],
+  tags: ["Railway-certified", "120 V", "±5 mV", "IS 16490 PSI"],
+  caseStudies: [
+    {
+      categoryTag: "HIGH-SPEED RAIL · INDIAN RAILWAYS",
+      title: "Vande Bharat Express",
+      imageSrc: "/images/field/vande-bharat.png",
+      imageAlt: "Vande Bharat Express",
+      href: "/industries/rail",
+    },
+  ],
+};
+
+export const commercialIndustrialDetailData: IndustryDetailSectionData = {
+  id: "03",
+  industryTag: "INDUSTRY 03",
+  title: "Commercial & industrial",
+  description:
+    "The one industry that buys all four. Rooftop solar, behind-the-meter storage, the control layer that arbitrages between them, and depot charging — sized against one another rather than bought separately.",
+  supplies: [
+    {
+      supplyNumber: "WE SUPPLY · 01",
+      title: "Battery packs",
+      description:
+        "48–128 kWh air-cooled and 215–261 kWh liquid-cooled storage, stacking to MWh class.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 02",
+      title: "Battery management",
+      description:
+        "ESS battery management and the energy management layer that schedules charge against your tariff.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 03",
+      title: "Solar",
+      description:
+        "Factory, warehouse and campus roofs across sheet and concrete, with automated cleaning and remote monitoring.",
+    },
+     {
+      supplyNumber: "WE SUPPLY · 04",
+      title: "EV charging",
+      description:
+        "Workplace and fleet-depot AC and DC charging on OCPP-native management software.",
+    },
+  ],
+  caseStudies: [
+    {
+      categoryTag: "C&I STORAGE · CHENNAI",
+      title: "2.15 MWh",
+      imageSrc: "/images/industries/company-industries/img-1.png",
+      imageAlt: "2.15 MWh",
+      description: "2.15 MWh liquid-cooled storage, stacking to MWh class.",
+      href: "/industries/commercial-industrial",
+      contextLink: "/industries/commercial-industrial",
+      contextLinkText: "More Details",
+    },
+    {
+      categoryTag: "C&I STORAGE · MAHARASHTRA",
+      title: "261 kWh",
+      imageSrc: "/images/industries/company-industries/img-2.png",
+      imageAlt: "261 kWh",
+      description:"Single liquid-cooled unit, intelligent thermal balancing, dual-level fire protection.",
+      href: "/industries/commercial-industrial",
+      contextLink: "/industries/commercial-industrial",
+      contextLinkText: "More Details",
+    },
+    {
+      categoryTag: "ROOFTOP SOLAR · CHENNAI",
+      title: "400 kW",
+      imageSrc: "/images/industries/company-industries/img-3.jpg",
+      imageAlt: "400 kW",
+      description:"Corporate roof across sheet and concrete, with automated cleaning and remote monitoring.",
+      href: "/industries/commercial-industrial",
+      contextLink: "/industries/commercial-industrial",
+      contextLinkText: "More Details",
+    },
+  ],
+};
+
+export const utilityGridDetailData: IndustryDetailSectionData = {
+  id: "04",
+  industryTag: "INDUSTRY 04",
+  title: "Utility & grid.",
+  description:
+    "Grid-tied generation and megawatt-hour storage, with the monitoring and scheduling layer that keeps the yield where the financial model said it would be.",
+  supplies: [
+    {
+      supplyNumber: "WE SUPPLY · 01",
+      title: "Battery packs",
+      description:
+        "MWh-class storage engineered to the site and the off-take agreement, not sold from a catalogue.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 02",
+      title: "Battery management",
+      description:
+        "Three-tier control — module slave, rack master, multi-string controller — up to 1500 V DC and twenty racks per controller.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 03",
+      title: "Solar",
+      description:
+        "Ground-mount solar parks, floating PV and rural mini-grids, with turnkey EPC and long-run O&M.",
+    },
+  ],
+  caseStudies: [
+    {
+      categoryTag: "GRID-TIED · 5 MW · MH · RJ · KL",
+      title: "PPA with a prime EPC",
+      imageSrc: "/images/industries/utility-grid/img-1.jpg",
+      imageAlt: "PPA with a prime EPC",
+      href: "/industries/utility-grid",
+      contextLink: "/industries/utility-grid",
+      contextLinkText: "More Details",
+    },
+    {
+      categoryTag: "GRID-TIED · 1 MW · BENGALURU",
+      title: "Three-site rooftop",
+      imageSrc: "/images/industries/utility-grid/img-2.jpg",
+      imageAlt: "Three-site rooftop",
+      href: "/industries/utility-grid",
+      contextLink: "/industries/utility-grid",
+      contextLinkText: "More Details",
+    },
+    {
+      categoryTag: "FLOATING PV · TAMIL NADU",
+      title: "Rural Prosperity Mission",
+      imageSrc: "/images/industries/utility-grid/img-3.jpg",
+      imageAlt: "Rural Prosperity Mission",
+      href: "/industries/utility-grid",
+      contextLink: "/industries/utility-grid",
+      contextLinkText: "More Details",
+    },
+  ],
+};
 
 
+export const residentialDetailData: IndustryDetailSectionData = {
+  id: "05",
+  industryTag: "INDUSTRY 05",
+  title: "Residential",
+  description:
+    "Rooftop solar from 2 kW to 7.5 kW paired with a modular 51.2 V home battery that stacks as the household load grows — integrated with all major inverter brands, on our own battery management.",
+  supplies: [
+    {
+      supplyNumber: "WE SUPPLY · 01",
+      title: "Battery packs",
+      description:
+        "51.2 V home stack, 10.2 kWh per module, up to 20 in parallel on Tier-1 LFP cells.",
+    },
+    {
+      supplyNumber: "WE SUPPLY · 02",
+      title: "Solar",
+      description:
+        "Grid-tied, hybrid and off-grid rooftops from 2 to 7.5 kW, delivered across Bengaluru, Chennai and Coimbatore.",
+    },
+  ],
+  tags: [],
+  caseStudies: [
+    {
+      categoryTag: "ROOFTOP SOLAR · CHENNAI",
+      title: "Residential rooftop PV",
+      imageSrc: "/images/industries/residantal/img-1.jpg",
+      imageAlt: "Residential rooftop PV",
+      href: "/industries/residential",
+    },
+  ],
+};
 
+export interface PartnerLogoItem {
+  id: string;
+  name: string;
+  logoSrc: string;
+  logoAlt: string;
+}
 
+export interface TrustedPartnersData {
+  tag: string;
+  title: string;
+  description: string;
+  logos: PartnerLogoItem[];
+}
 
-
+export const trustedPartnersData: TrustedPartnersData = {
+  tag: "TRUSTED BY",
+  title: "Cell partners and customers.",
+  description:
+    "Tier-1 cell partnerships upstream; OEMs, utilities, IPPs and industrial operators downstream. Some are direct customers, some are reached through a prime EPC.",
+  logos: [
+    {
+      id: "murugappa",
+      name: "Murugappa",
+      logoSrc: "/images/industries/partner-logos/murugappa.png",
+      logoAlt: "Murugappa logo",
+    },
+    {
+      id: "tata-power",
+      name: "Tata Power",
+      logoSrc: "/images/industries/partner-logos/tata-power.png",
+      logoAlt: "Tata Power logo",
+    },
+    {
+      id: "greaves",
+      name: "Greaves",
+      logoSrc: "/images/industries/partner-logos/greaves.png",
+      logoAlt: "Greaves logo",
+    },
+    {
+      id: "godrej",
+      name: "Godrej",
+      logoSrc: "/images/industries/partner-logos/godrej.png",
+      logoAlt: "Godrej logo",
+    },
+    {
+      id: "diageo",
+      name: "Diageo",
+      logoSrc: "/images/industries/partner-logos/diageo.png",
+      logoAlt: "Diageo logo",
+    },
+    {
+      id: "grevol",
+      name: "Grevol",
+      logoSrc: "/images/industries/partner-logos/grevol.png",
+      logoAlt: "Grevol logo",
+    },
+    {
+      id: "geon",
+      name: "Geon Green Energy",
+      logoSrc: "/images/industries/partner-logos/geon.png",
+      logoAlt: "Geon Green Energy logo",
+    },
+    {
+      id: "inverted",
+      name: "Inverted",
+      logoSrc: "/images/industries/partner-logos/inverted.png",
+      logoAlt: "Inverted logo",
+    },
+    {
+      id: "bpe",
+      name: "Strategic Power BPS",
+      logoSrc: "/images/industries/partner-logos/bpe.png",
+      logoAlt: "Strategic Power BPS logo",
+    },
+    {
+      id: "gridco",
+      name: "GRIDCo",
+      logoSrc: "/images/industries/partner-logos/gridco.png",
+      logoAlt: "GRIDCo logo",
+    },
+    {
+      id: "calb",
+      name: "CALB",
+      logoSrc: "/images/industries/partner-logos/calb.png",
+      logoAlt: "CALB logo",
+    },
+  ],
+};
 
