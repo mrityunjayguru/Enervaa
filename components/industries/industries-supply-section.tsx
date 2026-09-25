@@ -52,12 +52,12 @@ export default function IndustriesSupplySection() {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-[#F6F6F6]">
+                <div className="p-3 sm:p-3 flex-1 flex flex-col justify-between bg-[#F6F6F6]">
                   {/* Title Link */}
                   <div>
                     <Link
                       href={item.href || "#"}
-                      className="flex items-center gap-1.5 text-nowrap text-2xl sm:text-2xl font-medium text-[#78BA43] mb-4 sm:mb-4 group/link transition-colors hover:text-[#67A337]"
+                      className="flex items-center gap-1.5 text-2xl sm:text-[22px] font-medium text-[#78BA43] mb-4 sm:mb-4 group/link transition-colors hover:text-[#67A337]"
                     >
                       <span>{item.title}</span>
                       <span className=" transition-transform duration-200 group-hover/link:translate-x-1">
