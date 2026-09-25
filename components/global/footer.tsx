@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white text-neutral-800 pt-12 pb-8">
+    <footer className="w-full bg-white text-neutral-800 pt-12 pb-8 border-t border-neutral-200">
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Row 1: Logo & Offices */}
         <AnimateIn variant="fade-up" className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-10">

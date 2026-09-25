@@ -22,7 +22,7 @@ export default function IndustriesPartnersSection({
 
   return (
     <section
-      className={`w-full bg-[#F4F6EE] py-16 sm:py-20 lg:py-24 relative overflow-hidden ${className}`}
+      className={`w-full bg-white py-16 sm:py-20 lg:py-24 relative overflow-hidden ${className}`}
     >
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12 mb-10 lg:mb-14">
         {/* Top Header Block */}
@@ -32,9 +32,9 @@ export default function IndustriesPartnersSection({
           </p>
           <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 lg:gap-12">
             <div className="max-w-xl lg:max-w-2xl">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 mb-4 max-w-2xl sm:max-w-4xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-neutral-900 max-w-2xl sm:max-w-4xl">
                 {data.title}
-              </h2>
+              </h1>
             </div>
             <div className="max-w-md lg:max-w-2xl lg:pt-1">
                <p className="text-[15px] sm:text-lg text-black mb-4 max-w-4xl">
@@ -44,13 +44,12 @@ export default function IndustriesPartnersSection({
           </div>
         </AnimateIn>
       </div>
-
       {/* Infinite Marquee Logo Carousel */}
       <AnimateIn variant="fade-up" delay={150}>
         <div className="relative w-full overflow-hidden py-2">
           {/* Soft Gradient Mask Overlays on Left & Right Edges */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#F4F6EE] to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#F4F6EE] to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-white to-transparent z-10" />
 
           {/* Marquee Track */}
           <div className="flex w-max animate-marquee space-x-4 sm:space-x-6">
@@ -72,7 +71,9 @@ export default function IndustriesPartnersSection({
             ))}
           </div>
         </div>
+        
       </AnimateIn>
+      
     </section>
   );
 }

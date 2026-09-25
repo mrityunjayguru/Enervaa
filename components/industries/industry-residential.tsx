@@ -22,7 +22,7 @@ export default function IndustryResidentialSection({
 
   return (
     <section
-      className={`w-full bg-white py-16 sm:py-20 lg:py-24 relative overflow-hidden ${className}`}
+      className={`w-full bg-[#F4F6EE] py-16 sm:py-20 lg:py-24 relative overflow-hidden ${className}`}
     >
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Top Header Block */}
